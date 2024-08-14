@@ -1,0 +1,8 @@
+class Point
+{
+    var x;
+    var y;
+}
+
+new Point(11, 22);
+808

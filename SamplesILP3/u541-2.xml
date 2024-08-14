@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id$
+(comment "fonction sans variable")
+(define (f)
+  541 )
+(f)
+;;; end of u541-2.scm
+
+ -->
+<program
+><!-- test:name description='fonction sans variable' 
+--><functionDefinition name='f'
+><variables
+></variables
+><body
+><integer value='541'
+/></body
+></functionDefinition
+><invocation
+><function
+><variable name='f'
+/></function
+><arguments
+></arguments
+></invocation
+></program
+>

@@ -1,0 +1,83 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"b83b79c3-bf23-4a1c-9c3b-443bef6512d0\" name=\"更改\" comment=\"2.3.1 fini encore*2 une fois~\">\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/Java/src/com/paracamplus/ilp4/ilp4tme8/ILPMLgrammar4tme8.g4\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/Java/src/com/paracamplus/ilp4/ilp4tme8/ast/ASTfactoryTME8.java\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/Java/src/com/paracamplus/ilp4/ilp4tme8/ast/ASThasProperty.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Java/src/com/paracamplus/ilp4/ilp4tme8/ast/ASThasProperty.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/Java/src/com/paracamplus/ilp4/ilp4tme8/ast/ASTreadProperty.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Java/src/com/paracamplus/ilp4/ilp4tme8/ast/ASTreadProperty.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/Java/src/com/paracamplus/ilp4/ilp4tme8/ast/ASTwriteProperty.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Java/src/com/paracamplus/ilp4/ilp4tme8/ast/ASTwriteProperty.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/Java/src/com/paracamplus/ilp4/ilp4tme8/interfaces/IASTfactoryTME8.java\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/Java/src/com/paracamplus/ilp4/ilp4tme8/interfaces/IASTvisitorTME8.java\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/Java/src/com/paracamplus/ilp4/ilp4tme8/interpreter/InstanceTME8.java\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/Java/src/com/paracamplus/ilp4/ilp4tme8/interpreter/InterpreterTME8.java\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/Java/src/com/paracamplus/ilp4/ilp4tme8/interpreter/interfaces/IInstanceTME8.java\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/Java/src/com/paracamplus/ilp4/ilp4tme8/interpreter/test/InterpreterTest.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Java/src/com/paracamplus/ilp4/ilp4tme8/interpreter/test/InterpreterTest.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/Java/src/com/paracamplus/ilp4/ilp4tme8/parser/ilpml/ILPMLListener.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Java/src/com/paracamplus/ilp4/ilp4tme8/parser/ilpml/ILPMLListener.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/Java/src/com/paracamplus/ilp4/ilp4tme8/parser/ilpml/ILPMLParser.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Java/src/com/paracamplus/ilp4/ilp4tme8/parser/ilpml/ILPMLParser.java\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"MarkdownSettingsMigration\">\n    <option name=\"stateVersion\" value=\"1\" />\n  </component>\n  <component name=\"ProjectColorInfo\">{\n  &quot;associatedIndex&quot;: 5\n}</component>\n  <component name=\"ProjectId\" id=\"2Ya86lhbTtsd4L9jwCzpnIiInSX\" />\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">{\n  &quot;keyToString&quot;: {\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\n    &quot;git-widget-placeholder&quot;: &quot;main&quot;,\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\n  }\n}</component>\n  <component name=\"RunManager\" selected=\"JUnit.CompilerTest (1)\">\n    <configuration name=\"CompilerTest (1)\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\n      <module name=\"ILP4\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"com.paracamplus.ilp4.ilp4tme8.compiler.test.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <option name=\"PACKAGE_NAME\" value=\"com.paracamplus.ilp4.ilp4tme8.compiler.test\" />\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.paracamplus.ilp4.ilp4tme8.compiler.test.CompilerTest\" />\n      <option name=\"TEST_OBJECT\" value=\"class\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"CompilerTest\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\n      <module name=\"ILP4\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"com.paracamplus.ilp4.compiler.test.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <option name=\"PACKAGE_NAME\" value=\"com.paracamplus.ilp4.compiler.test\" />\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.paracamplus.ilp4.compiler.test.CompilerTest\" />\n      <option name=\"TEST_OBJECT\" value=\"class\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"InterpreterTest\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\n      <module name=\"ILP4\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"com.paracamplus.ilp4.ilp4tme8.interpreter.test.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <option name=\"PACKAGE_NAME\" value=\"com.paracamplus.ilp4.ilp4tme8.interpreter.test\" />\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.paracamplus.ilp4.ilp4tme8.interpreter.test.InterpreterTest\" />\n      <option name=\"TEST_OBJECT\" value=\"class\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <recent_temporary>\n      <list>\n        <item itemvalue=\"JUnit.CompilerTest (1)\" />\n        <item itemvalue=\"JUnit.InterpreterTest\" />\n        <item itemvalue=\"JUnit.CompilerTest\" />\n      </list>\n    </recent_temporary>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"应用程序级\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"默认任务\">\n      <changelist id=\"b83b79c3-bf23-4a1c-9c3b-443bef6512d0\" name=\"更改\" comment=\"\" />\n      <created>1700752159101</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1700752159101</updated>\n      <workItem from=\"1700752160102\" duration=\"292000\" />\n      <workItem from=\"1700752601247\" duration=\"17000\" />\n      <workItem from=\"1700752855877\" duration=\"2130000\" />\n      <workItem from=\"1700754987681\" duration=\"4560000\" />\n      <workItem from=\"1701279025820\" duration=\"18000\" />\n      <workItem from=\"1701279495211\" duration=\"1986000\" />\n      <workItem from=\"1701697127366\" duration=\"16000\" />\n      <workItem from=\"1701953769978\" duration=\"714000\" />\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"2.3.1 fini~\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1700755215160</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1700755215160</updated>\n    </task>\n    <task id=\"LOCAL-00002\" summary=\"2.3.1 fini encore une fois~\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1700755400951</created>\n      <option name=\"number\" value=\"00002\" />\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1700755400951</updated>\n    </task>\n    <task id=\"LOCAL-00003\" summary=\"2.3.1 fini encore*2 une fois~\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1700756410879</created>\n      <option name=\"number\" value=\"00003\" />\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1700756410879</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"4\" />\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"2.3.1 fini~\" />\n    <MESSAGE value=\"2.3.1 fini encore une fois~\" />\n    <MESSAGE value=\"2.3.1 fini encore*2 une fois~\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"2.3.1 fini encore*2 une fois~\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision c4bdcae6d12c23023dc0e37a2eb0277cc7446157)
++++ b/.idea/workspace.xml	(date 1701954805296)
+@@ -4,22 +4,7 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="b83b79c3-bf23-4a1c-9c3b-443bef6512d0" name="更改" comment="2.3.1 fini encore*2 une fois~">
+-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Java/src/com/paracamplus/ilp4/ilp4tme8/ILPMLgrammar4tme8.g4" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Java/src/com/paracamplus/ilp4/ilp4tme8/ast/ASTfactoryTME8.java" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Java/src/com/paracamplus/ilp4/ilp4tme8/ast/ASThasProperty.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/src/com/paracamplus/ilp4/ilp4tme8/ast/ASThasProperty.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Java/src/com/paracamplus/ilp4/ilp4tme8/ast/ASTreadProperty.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/src/com/paracamplus/ilp4/ilp4tme8/ast/ASTreadProperty.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Java/src/com/paracamplus/ilp4/ilp4tme8/ast/ASTwriteProperty.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/src/com/paracamplus/ilp4/ilp4tme8/ast/ASTwriteProperty.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Java/src/com/paracamplus/ilp4/ilp4tme8/interfaces/IASTfactoryTME8.java" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Java/src/com/paracamplus/ilp4/ilp4tme8/interfaces/IASTvisitorTME8.java" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Java/src/com/paracamplus/ilp4/ilp4tme8/interpreter/InstanceTME8.java" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Java/src/com/paracamplus/ilp4/ilp4tme8/interpreter/InterpreterTME8.java" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Java/src/com/paracamplus/ilp4/ilp4tme8/interpreter/interfaces/IInstanceTME8.java" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Java/src/com/paracamplus/ilp4/ilp4tme8/interpreter/test/InterpreterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/src/com/paracamplus/ilp4/ilp4tme8/interpreter/test/InterpreterTest.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Java/src/com/paracamplus/ilp4/ilp4tme8/parser/ilpml/ILPMLListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/src/com/paracamplus/ilp4/ilp4tme8/parser/ilpml/ILPMLListener.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Java/src/com/paracamplus/ilp4/ilp4tme8/parser/ilpml/ILPMLParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/src/com/paracamplus/ilp4/ilp4tme8/parser/ilpml/ILPMLParser.java" afterDir="false" />
+-    </list>
++    <list default="true" id="b83b79c3-bf23-4a1c-9c3b-443bef6512d0" name="更改" comment="TME8 test 0.01" />
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -123,7 +108,7 @@
+       <workItem from="1701279025820" duration="18000" />
+       <workItem from="1701279495211" duration="1986000" />
+       <workItem from="1701697127366" duration="16000" />
+-      <workItem from="1701953769978" duration="714000" />
++      <workItem from="1701953769978" duration="1035000" />
+     </task>
+     <task id="LOCAL-00001" summary="2.3.1 fini~">
+       <option name="closed" value="true" />
+@@ -149,16 +134,36 @@
+       <option name="project" value="LOCAL" />
+       <updated>1700756410879</updated>
+     </task>
+-    <option name="localTasksCounter" value="4" />
++    <task id="LOCAL-00004" summary="TME8 test 0.01">
++      <option name="closed" value="true" />
++      <created>1701954718572</created>
++      <option name="number" value="00004" />
++      <option name="presentableId" value="LOCAL-00004" />
++      <option name="project" value="LOCAL" />
++      <updated>1701954718572</updated>
++    </task>
++    <option name="localTasksCounter" value="5" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+     <option name="version" value="3" />
+   </component>
++  <component name="Vcs.Log.Tabs.Properties">
++    <option name="TAB_STATES">
++      <map>
++        <entry key="MAIN">
++          <value>
++            <State />
++          </value>
++        </entry>
++      </map>
++    </option>
++  </component>
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="2.3.1 fini~" />
+     <MESSAGE value="2.3.1 fini encore une fois~" />
+     <MESSAGE value="2.3.1 fini encore*2 une fois~" />
+-    <option name="LAST_COMMIT_MESSAGE" value="2.3.1 fini encore*2 une fois~" />
++    <MESSAGE value="TME8 test 0.01" />
++    <option name="LAST_COMMIT_MESSAGE" value="TME8 test 0.01" />
+   </component>
+ </project>
+\ No newline at end of file

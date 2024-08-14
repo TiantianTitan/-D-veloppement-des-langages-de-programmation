@@ -1,0 +1,10 @@
+class Point extends Object
+{
+    var x;
+
+    method print ()
+    (print("print@Point"); super);
+}
+
+let pc = new Point(8490) in
+try (pc.print(); 8490) catch (e) false

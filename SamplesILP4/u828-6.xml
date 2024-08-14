@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id: u828-6.scm 405 2006-09-13 17:21:53Z queinnec $
+(comment "Superclasse sans champ")
+(expected-result 828)
+
+(defclass Point Object
+  () )
+
+(defclass SousPoint Point
+  (sous)
+  (define (m1)
+    (oget (self) "sous") ) )
+
+(send "m1" (new SousPoint 828))
+
+;;; end of u828-6.scm
+
+ -->
+<program
+><!-- test:name description='Superclasse sans champ' 
+--><!-- test:result value='828' 
+--><classDefinition name='Point' parent='Object'
+><fields
+></fields
+><methods
+></methods
+></classDefinition
+><classDefinition name='SousPoint' parent='Point'
+><fields
+><field name='sous'
+/></fields
+><methods
+><method name='m1'
+><variables
+></variables
+><body
+><fieldRead field='sous'
+><target
+><self
+/></target
+></fieldRead
+></body
+></method
+></methods
+></classDefinition
+><send message='m1'
+><receiver
+><instantiation class='SousPoint'
+><integer value='828'
+/></instantiation
+></receiver
+><arguments
+></arguments
+></send
+></program
+>

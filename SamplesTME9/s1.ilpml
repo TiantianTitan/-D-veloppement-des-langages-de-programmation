@@ -1,0 +1,30 @@
+class counter extends Object
+{
+    var count;
+
+    method increment ()
+    (self.count = self.count + 2);
+
+    method getCount()
+    (self.count);
+}
+
+class doubleCounter extends counter
+{
+    var step;
+
+    method increment ()
+    (self.count = self.count + self.step * 2; super);
+}
+
+let counterInstance = new doubleCounter(10, 3) and iteration = 0 in (
+    while iteration < 50000 do (
+        try (
+            counterInstance.increment();
+            iteration = iteration + 1;
+        ) catch (e) (
+            false
+        )
+    );
+    counterInstance.getCount();
+)

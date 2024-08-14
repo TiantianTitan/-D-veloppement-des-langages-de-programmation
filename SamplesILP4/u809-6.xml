@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id: u809-6.scm 405 2006-09-13 17:21:53Z queinnec $
+(comment "lecture d'un champ")
+(expected-result 809)
+
+(defclass Point Object
+  (x y) )
+(let ((point (new Point 809 22)))
+  (oget point "x") )
+
+;;; end of u809-6.scm
+
+ -->
+<program
+><!-- test:name description='lecture d'un champ' 
+--><!-- test:result value='809' 
+--><classDefinition name='Point' parent='Object'
+><fields
+><field name='x'
+/><field name='y'
+/></fields
+><methods
+></methods
+></classDefinition
+><block
+><bindings
+><binding
+><variable name='point'
+/><initialisation
+><instantiation class='Point'
+><integer value='809'
+/><integer value='22'
+/></instantiation
+></initialisation
+></binding
+></bindings
+><body
+><fieldRead field='x'
+><target
+><variable name='point'
+/></target
+></fieldRead
+></body
+></block
+></program
+>

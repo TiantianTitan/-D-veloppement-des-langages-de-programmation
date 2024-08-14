@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id: u5901-2.scm 491 2006-10-09 10:33:08Z queinnec $
+(comment "Affectation en position d'argument (sans conflit de variables)")
+
+(define (foo x)
+  (* 2 x) )
+
+;;; Cette pseudo-sequence repose sur le fait que le compilateur et
+;;; l'evaluateur evaluent les arguments de la gauche vers la droite.
+(define (pseudosequence one two)
+  two )
+
+(let ((y 11))
+  (foo (pseudosequence (set! y (+ y 1))
+                        y )) )
+
+;;; end of u5901-2.scm
+
+ -->
+<program
+><!-- test:name description='Affectation en position d'argument (sans conflit de variables)' 
+--><functionDefinition name='foo'
+><variables
+><variable name='x'
+/></variables
+><body
+><binaryOperation operator='*'
+><leftOperand
+><integer value='2'
+/></leftOperand
+><rightOperand
+><variable name='x'
+/></rightOperand
+></binaryOperation
+></body
+></functionDefinition
+><functionDefinition name='pseudosequence'
+><variables
+><variable name='one'
+/><variable name='two'
+/></variables
+><body
+><variable name='two'
+/></body
+></functionDefinition
+><block
+><bindings
+><binding
+><variable name='y'
+/><initialisation
+><integer value='11'
+/></initialisation
+></binding
+></bindings
+><body
+><invocation
+><function
+><variable name='foo'
+/></function
+><arguments
+><invocation
+><function
+><variable name='pseudosequence'
+/></function
+><arguments
+><assignment name='y'
+><value
+><binaryOperation operator='+'
+><leftOperand
+><variable name='y'
+/></leftOperand
+><rightOperand
+><integer value='1'
+/></rightOperand
+></binaryOperation
+></value
+></assignment
+><variable name='y'
+/></arguments
+></invocation
+></arguments
+></invocation
+></body
+></block
+></program
+>

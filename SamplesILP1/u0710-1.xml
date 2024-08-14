@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id$
+(expected-result 710)
+(or #f (or 710 2))
+
+;;; end of u0710-1.scm
+
+ -->
+<program
+><!-- test:result value='710' 
+--><binaryOperation operator='|'
+><leftOperand
+><boolean value='false'
+/></leftOperand
+><rightOperand
+><binaryOperation operator='|'
+><leftOperand
+><integer value='710'
+/></leftOperand
+><rightOperand
+><integer value='2'
+/></rightOperand
+></binaryOperation
+></rightOperand
+></binaryOperation
+></program
+>

@@ -1,0 +1,6 @@
+function man_3agle(n)
+(
+  n / 2
+);
+
+man_3agle(2 * 5490)

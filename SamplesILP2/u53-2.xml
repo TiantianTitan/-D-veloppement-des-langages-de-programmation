@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id: u53-2.scm 405 2006-09-13 17:21:53Z queinnec $
+(comment "double boucle imbriquee")
+(let ((x 5))
+  (while (< x 53)
+    (print x)
+    (set! x (* 2 x))
+    (while (> x 53)
+      (print x)
+      (set! x (- x 3)) ) )
+  x )
+
+;;; end of u53-2.scm
+
+ -->
+<program
+><!-- test:name description='double boucle imbriquee' 
+--><block
+><bindings
+><binding
+><variable name='x'
+/><initialisation
+><integer value='5'
+/></initialisation
+></binding
+></bindings
+><body
+><loop
+><condition
+><binaryOperation operator='&lt;'
+><leftOperand
+><variable name='x'
+/></leftOperand
+><rightOperand
+><integer value='53'
+/></rightOperand
+></binaryOperation
+></condition
+><body
+><invocation
+><function
+><variable name='print'
+/></function
+><arguments
+><variable name='x'
+/></arguments
+></invocation
+><assignment name='x'
+><value
+><binaryOperation operator='*'
+><leftOperand
+><integer value='2'
+/></leftOperand
+><rightOperand
+><variable name='x'
+/></rightOperand
+></binaryOperation
+></value
+></assignment
+><loop
+><condition
+><binaryOperation operator='&gt;'
+><leftOperand
+><variable name='x'
+/></leftOperand
+><rightOperand
+><integer value='53'
+/></rightOperand
+></binaryOperation
+></condition
+><body
+><invocation
+><function
+><variable name='print'
+/></function
+><arguments
+><variable name='x'
+/></arguments
+></invocation
+><assignment name='x'
+><value
+><binaryOperation operator='-'
+><leftOperand
+><variable name='x'
+/></leftOperand
+><rightOperand
+><integer value='3'
+/></rightOperand
+></binaryOperation
+></value
+></assignment
+></body
+></loop
+></body
+></loop
+><variable name='x'
+/></body
+></block
+></program
+>

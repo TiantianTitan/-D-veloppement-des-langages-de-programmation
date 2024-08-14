@@ -1,0 +1,7 @@
+function foo(x)
+(2 * x);
+
+function bar(x, y)
+(y + x);
+
+bar(foo(4), foo(5))

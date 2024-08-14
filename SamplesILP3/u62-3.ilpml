@@ -1,0 +1,9 @@
+let x = 1 in
+(    
+  (
+    try throw(3)
+    finally x = 4
+  );
+  print(x);
+  x == 4
+)

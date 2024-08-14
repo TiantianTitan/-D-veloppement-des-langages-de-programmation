@@ -1,0 +1,141 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id: u827-6.scm 405 2006-09-13 17:21:53Z queinnec $
+(comment "perpetuation de self a travers la superclasse")
+(expected-result 827)
+
+(defclass Point Object
+  (x y)
+  (define (m2 u)
+    (send "m1" (self) 1 u) )
+  (define (m1 z t)
+    (+ (* z (oget (self) "x"))
+       (* t (oget (self) "y")) ) ) )
+
+(defclass PointColore Point
+  (color)
+  (define (m1 z t)
+    (+ 826 z) ) )
+
+(let ((pc (new PointColore 11 22 "red")))
+  (send "m2" pc 2) )
+
+;;; end of u827-6.scm
+
+ -->
+<program
+><!-- test:name description='perpetuation de self a travers la superclasse' 
+--><!-- test:result value='827' 
+--><classDefinition name='Point' parent='Object'
+><fields
+><field name='x'
+/><field name='y'
+/></fields
+><methods
+><method name='m2'
+><variables
+><variable name='u'
+/></variables
+><body
+><send message='m1'
+><receiver
+><self
+/></receiver
+><arguments
+><integer value='1'
+/><variable name='u'
+/></arguments
+></send
+></body
+></method
+><method name='m1'
+><variables
+><variable name='z'
+/><variable name='t'
+/></variables
+><body
+><binaryOperation operator='+'
+><leftOperand
+><binaryOperation operator='*'
+><leftOperand
+><variable name='z'
+/></leftOperand
+><rightOperand
+><fieldRead field='x'
+><target
+><self
+/></target
+></fieldRead
+></rightOperand
+></binaryOperation
+></leftOperand
+><rightOperand
+><binaryOperation operator='*'
+><leftOperand
+><variable name='t'
+/></leftOperand
+><rightOperand
+><fieldRead field='y'
+><target
+><self
+/></target
+></fieldRead
+></rightOperand
+></binaryOperation
+></rightOperand
+></binaryOperation
+></body
+></method
+></methods
+></classDefinition
+><classDefinition name='PointColore' parent='Point'
+><fields
+><field name='color'
+/></fields
+><methods
+><method name='m1'
+><variables
+><variable name='z'
+/><variable name='t'
+/></variables
+><body
+><binaryOperation operator='+'
+><leftOperand
+><integer value='826'
+/></leftOperand
+><rightOperand
+><variable name='z'
+/></rightOperand
+></binaryOperation
+></body
+></method
+></methods
+></classDefinition
+><block
+><bindings
+><binding
+><variable name='pc'
+/><initialisation
+><instantiation class='PointColore'
+><integer value='11'
+/><integer value='22'
+/><string
+>red</string
+></instantiation
+></initialisation
+></binding
+></bindings
+><body
+><send message='m2'
+><receiver
+><variable name='pc'
+/></receiver
+><arguments
+><integer value='2'
+/></arguments
+></send
+></body
+></block
+></program
+>

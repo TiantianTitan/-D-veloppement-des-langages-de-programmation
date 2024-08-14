@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id$
+(comment "fermeture utilisee en dehors de sa portee native")
+(+ ((letrec ()
+      (define (double x) (* 2 x))
+      double )
+    8 )
+   2 )
+
+;;; end of ur18-5.scm
+
+ -->
+<program
+><!-- test:name description='fermeture utilisee en dehors de sa portee native' 
+--><binaryOperation operator='+'
+><leftOperand
+><invocation
+><function
+><codefinitions
+><functions
+><functionDefinition name='double'
+><variables
+><variable name='x'
+/></variables
+><body
+><binaryOperation operator='*'
+><leftOperand
+><integer value='2'
+/></leftOperand
+><rightOperand
+><variable name='x'
+/></rightOperand
+></binaryOperation
+></body
+></functionDefinition
+></functions
+><body
+><variable name='double'
+/></body
+></codefinitions
+></function
+><arguments
+><integer value='8'
+/></arguments
+></invocation
+></leftOperand
+><rightOperand
+><integer value='2'
+/></rightOperand
+></binaryOperation
+></program
+>

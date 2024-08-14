@@ -1,0 +1,8 @@
+function foo(x)
+(2 * x);
+
+function pseudosequence(one, two)
+two;
+
+let x = 11 in
+foo(pseudosequence ((x = x + 1), x))

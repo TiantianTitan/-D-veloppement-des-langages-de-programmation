@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id$
+(comment "constante pi est un nombre")
+(- pi 0.1415926535)
+
+;;; end of u36-1.scm
+
+ -->
+<program
+><!-- test:name description='constante pi est un nombre' 
+--><binaryOperation operator='-'
+><leftOperand
+><variable name='pi'
+/></leftOperand
+><rightOperand
+><float value='0.1415926535'
+/></rightOperand
+></binaryOperation
+></program
+>

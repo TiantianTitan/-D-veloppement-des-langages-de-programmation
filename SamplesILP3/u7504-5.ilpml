@@ -1,0 +1,6 @@
+(
+  let x = 4 in
+  let f = lambda (y) x + y in
+  f
+) (7500)
+

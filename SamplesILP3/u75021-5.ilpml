@@ -1,0 +1,3 @@
+let x = 21 in
+g = lambda (y) x + y;
+g(75000)

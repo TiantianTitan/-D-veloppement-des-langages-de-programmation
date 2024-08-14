@@ -1,0 +1,14 @@
+function odd(n)
+(
+  if n == 0
+  then false
+  else even(n - 1)
+)
+and function even(n)
+(
+  if n <= 0
+  then true
+  else odd(n - 1)
+)
+in even(2)
+

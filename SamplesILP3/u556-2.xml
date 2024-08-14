@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id: u556-2.scm 405 2006-09-13 17:21:53Z queinnec $
+(comment "deux fonctions non mutuellement recursives dans le bon ordre")
+(define (foo x)
+  (* 2 x) )
+(define (bar y)
+  (+ 3 (foo y)) )
+(bar 556)
+
+;;; end of u556-2.scm
+
+ -->
+<program
+><!-- test:name description='deux fonctions non mutuellement recursives dans le bon ordre' 
+--><functionDefinition name='foo'
+><variables
+><variable name='x'
+/></variables
+><body
+><binaryOperation operator='*'
+><leftOperand
+><integer value='2'
+/></leftOperand
+><rightOperand
+><variable name='x'
+/></rightOperand
+></binaryOperation
+></body
+></functionDefinition
+><functionDefinition name='bar'
+><variables
+><variable name='y'
+/></variables
+><body
+><binaryOperation operator='+'
+><leftOperand
+><integer value='3'
+/></leftOperand
+><rightOperand
+><invocation
+><function
+><variable name='foo'
+/></function
+><arguments
+><variable name='y'
+/></arguments
+></invocation
+></rightOperand
+></binaryOperation
+></body
+></functionDefinition
+><invocation
+><function
+><variable name='bar'
+/></function
+><arguments
+><integer value='556'
+/></arguments
+></invocation
+></program
+>

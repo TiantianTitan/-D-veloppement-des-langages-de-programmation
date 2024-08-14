@@ -1,0 +1,9 @@
+class Point extends Object
+{
+    var x;
+    var y;
+
+    method pr_3aint () 8452;
+}
+
+(new Point(11, 22)).pr_3aint()

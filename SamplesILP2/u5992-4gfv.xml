@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id: u5992-4gfv.scm 620 2007-01-07 14:24:50Z queinnec $
+(comment "variable globale fonctionnelle recopiee")
+(define (deuxfois x)
+  (* 2 x) )
+(let ((f deuxfois))
+  (- (f 3000) 8) )
+
+;;; end of u5992-4trc.scm
+
+ -->
+<program
+><!-- test:name description='variable globale fonctionnelle recopiee' 
+--><functionDefinition name='deuxfois'
+><variables
+><variable name='x'
+/></variables
+><body
+><binaryOperation operator='*'
+><leftOperand
+><integer value='2'
+/></leftOperand
+><rightOperand
+><variable name='x'
+/></rightOperand
+></binaryOperation
+></body
+></functionDefinition
+><block
+><bindings
+><binding
+><variable name='f'
+/><initialisation
+><variable name='deuxfois'
+/></initialisation
+></binding
+></bindings
+><body
+><binaryOperation operator='-'
+><leftOperand
+><invocation
+><function
+><variable name='f'
+/></function
+><arguments
+><integer value='3000'
+/></arguments
+></invocation
+></leftOperand
+><rightOperand
+><integer value='8'
+/></rightOperand
+></binaryOperation
+></body
+></block
+></program
+>

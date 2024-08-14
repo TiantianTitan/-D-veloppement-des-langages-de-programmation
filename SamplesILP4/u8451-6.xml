@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id$
+(comment "class name to be mangled")
+(expected-result 8451)
+(defclass Po:int Object
+  (x y)
+  (define (print)
+    8451 ) )
+(send "print" (new Po:int 11 22))
+;;; end of u8451-6.scm
+
+ -->
+<program
+><!-- test:name description='class name to be mangled' 
+--><!-- test:result value='8451' 
+--><classDefinition name='Po:int' parent='Object'
+><fields
+><field name='x'
+/><field name='y'
+/></fields
+><methods
+><method name='print'
+><variables
+></variables
+><body
+><integer value='8451'
+/></body
+></method
+></methods
+></classDefinition
+><send message='print'
+><receiver
+><instantiation class='Po:int'
+><integer value='11'
+/><integer value='22'
+/></instantiation
+></receiver
+><arguments
+></arguments
+></send
+></program
+>

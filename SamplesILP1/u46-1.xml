@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id: u46-1.scm 405 2006-09-13 17:21:53Z queinnec $
+(comment "sequence avec effet de bord")
+(begin
+  (print "Un, ")
+  (print "deux et ")
+  (print "trois.") )
+
+;;; end of u46-1.scm
+
+ -->
+<program
+><!-- test:name description='sequence avec effet de bord' 
+--><sequence
+><invocation
+><function
+><variable name='print'
+/></function
+><arguments
+><string
+>Un, </string
+></arguments
+></invocation
+><invocation
+><function
+><variable name='print'
+/></function
+><arguments
+><string
+>deux et </string
+></arguments
+></invocation
+><invocation
+><function
+><variable name='print'
+/></function
+><arguments
+><string
+>trois.</string
+></arguments
+></invocation
+></sequence
+></program
+>

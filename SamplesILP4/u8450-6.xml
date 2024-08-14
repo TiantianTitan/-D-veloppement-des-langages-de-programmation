@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id$
+(comment "field name to be mangled")
+(expected-result 8450)
+(defclass Point Object
+  (x:x y)
+  (define (print)
+    (oget (self) x:x) ) )
+(send "print" (new Point 8450 22))
+;;; end of u8450-6.scm
+
+ -->
+<program
+><!-- test:name description='field name to be mangled' 
+--><!-- test:result value='8450' 
+--><classDefinition name='Point' parent='Object'
+><fields
+><field name='x:x'
+/><field name='y'
+/></fields
+><methods
+><method name='print'
+><variables
+></variables
+><body
+><fieldRead field='x:x'
+><target
+><self
+/></target
+></fieldRead
+></body
+></method
+></methods
+></classDefinition
+><send message='print'
+><receiver
+><instantiation class='Point'
+><integer value='8450'
+/><integer value='22'
+/></instantiation
+></receiver
+><arguments
+></arguments
+></send
+></program
+>

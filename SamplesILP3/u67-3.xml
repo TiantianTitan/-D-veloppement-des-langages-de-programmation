@@ -1,0 +1,177 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id: u67-3.scm 405 2006-09-13 17:21:53Z queinnec $
+(comment "tous les catchers tournent")
+(let ((x 1))
+  (try-catch-finally
+    (begin 
+      (set! x (+ x 1))
+      (try-catch-finally
+        (begin 
+          (set! x (+ x 1))
+          (throw x) )
+        (lambda (exc)
+          (print x)(print exc)
+          (set! x (* 2 (* x exc)))
+          (throw x) )
+        #f ) )
+    (lambda (exc)
+      (print x)(print exc)
+      (set! x (* 3 (* x exc))) )
+    #f )
+  (= x 972) )
+
+;;; end of u67-3.scm
+
+ -->
+<program
+><!-- test:name description='tous les catchers tournent' 
+--><block
+><bindings
+><binding
+><variable name='x'
+/><initialisation
+><integer value='1'
+/></initialisation
+></binding
+></bindings
+><body
+><try
+><body
+><sequence
+><assignment name='x'
+><value
+><binaryOperation operator='+'
+><leftOperand
+><variable name='x'
+/></leftOperand
+><rightOperand
+><integer value='1'
+/></rightOperand
+></binaryOperation
+></value
+></assignment
+><try
+><body
+><sequence
+><assignment name='x'
+><value
+><binaryOperation operator='+'
+><leftOperand
+><variable name='x'
+/></leftOperand
+><rightOperand
+><integer value='1'
+/></rightOperand
+></binaryOperation
+></value
+></assignment
+><invocation
+><function
+><variable name='throw'
+/></function
+><arguments
+><variable name='x'
+/></arguments
+></invocation
+></sequence
+></body
+><catch exception='exc'
+><invocation
+><function
+><variable name='print'
+/></function
+><arguments
+><variable name='x'
+/></arguments
+></invocation
+><invocation
+><function
+><variable name='print'
+/></function
+><arguments
+><variable name='exc'
+/></arguments
+></invocation
+><assignment name='x'
+><value
+><binaryOperation operator='*'
+><leftOperand
+><integer value='2'
+/></leftOperand
+><rightOperand
+><binaryOperation operator='*'
+><leftOperand
+><variable name='x'
+/></leftOperand
+><rightOperand
+><variable name='exc'
+/></rightOperand
+></binaryOperation
+></rightOperand
+></binaryOperation
+></value
+></assignment
+><invocation
+><function
+><variable name='throw'
+/></function
+><arguments
+><variable name='x'
+/></arguments
+></invocation
+></catch
+></try
+></sequence
+></body
+><catch exception='exc'
+><invocation
+><function
+><variable name='print'
+/></function
+><arguments
+><variable name='x'
+/></arguments
+></invocation
+><invocation
+><function
+><variable name='print'
+/></function
+><arguments
+><variable name='exc'
+/></arguments
+></invocation
+><assignment name='x'
+><value
+><binaryOperation operator='*'
+><leftOperand
+><integer value='3'
+/></leftOperand
+><rightOperand
+><binaryOperation operator='*'
+><leftOperand
+><variable name='x'
+/></leftOperand
+><rightOperand
+><variable name='exc'
+/></rightOperand
+></binaryOperation
+></rightOperand
+></binaryOperation
+></value
+></assignment
+></catch
+></try
+><binaryOperation operator='=='
+><leftOperand
+><variable name='x'
+/></leftOperand
+><rightOperand
+><integer value='972'
+/></rightOperand
+></binaryOperation
+></body
+></block
+></program
+>

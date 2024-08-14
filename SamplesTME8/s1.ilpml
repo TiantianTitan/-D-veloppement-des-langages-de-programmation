@@ -1,0 +1,9 @@
+class Dlp {
+    var trop;
+    var dureeeeeeeeeeeeee;
+    var ahhhhh;
+    var trop_dure;
+};
+
+let exam = new Dlp("je", "veux" , "me" , "tuer") in
+    exam["trop"];

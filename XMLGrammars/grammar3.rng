@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+  <!--
+    -*- coding: utf-8 -*-
+    ******************************************************************
+    ILP9 - Implantation d'un langage de programmation.
+    by Christian.Queinnec@paracamplus.com
+    See http://mooc.paracamplus.com/ilp9
+    GPL version 3
+    ****************************************************************** 
+  -->
+  <start>
+    <ref name="program"/>
+  </start>
+  <define name="functionDefinition">
+    <element name="functionDefinition">
+      <attribute name="name">
+        <data type="Name">
+          <except>
+            <data type="Name">
+              <param name="pattern">(ilp|ILP)</param>
+            </data>
+          </except>
+        </data>
+      </attribute>
+      <element name="variables">
+        <zeroOrMore>
+          <ref name="variable"/>
+        </zeroOrMore>
+      </element>
+      <element name="body">
+        <oneOrMore>
+          <ref name="expression"/>
+        </oneOrMore>
+      </element>
+    </element>
+  </define>
+  <define name="expression">
+    <choice>
+      <ref name="alternative"/>
+      <ref name="sequence"/>
+      <ref name="block"/>
+      <ref name="loop"/>
+      <ref name="try"/>
+      <ref name="variable"/>
+      <ref name="assignment"/>
+      <ref name="invocation"/>
+      <ref name="constant"/>
+      <ref name="operation"/>
+      <ref name="invocation"/>
+      <ref name="codefinitions"/>
+      <ref name="lambda"/>
+    </choice>
+  </define>
+  <define name="alternative">
+    <element name="alternative">
+      <element name="condition">
+        <ref name="expression"/>
+      </element>
+      <element name="consequence">
+        <oneOrMore>
+          <ref name="expression"/>
+        </oneOrMore>
+      </element>
+      <optional>
+        <element name="alternant">
+          <oneOrMore>
+            <ref name="expression"/>
+          </oneOrMore>
+        </element>
+      </optional>
+    </element>
+  </define>
+  <define name="sequence">
+    <element name="sequence">
+      <oneOrMore>
+        <ref name="expression"/>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="block">
+    <element name="block">
+      <element name="bindings">
+        <zeroOrMore>
+          <element name="binding">
+            <ref name="variable"/>
+            <element name="initialisation">
+              <ref name="expression"/>
+            </element>
+          </element>
+        </zeroOrMore>
+      </element>
+      <element name="body">
+        <oneOrMore>
+          <ref name="expression"/>
+        </oneOrMore>
+      </element>
+    </element>
+  </define>
+  <define name="codefinitions">
+    <element name="codefinitions">
+      <element name="functions">
+        <zeroOrMore>
+          <ref name="functionDefinition"/>
+        </zeroOrMore>
+      </element>
+      <element name="body">
+        <oneOrMore>
+          <ref name="expression"/>
+        </oneOrMore>
+      </element>
+    </element>
+  </define>
+  <define name="lambda">
+    <element name="lambda">
+      <element name="variables">
+        <zeroOrMore>
+          <ref name="variable"/>
+        </zeroOrMore>
+      </element>
+      <element name="body">
+        <oneOrMore>
+          <ref name="expression"/>
+        </oneOrMore>
+      </element>
+    </element>
+  </define>
+  <define name="loop">
+    <element name="loop">
+      <element name="condition">
+        <ref name="expression"/>
+      </element>
+      <element name="body">
+        <oneOrMore>
+          <ref name="expression"/>
+        </oneOrMore>
+      </element>
+    </element>
+  </define>
+  <define name="assignment">
+    <element name="assignment">
+      <attribute name="name">
+        <data type="Name">
+          <except>
+            <data type="Name">
+              <param name="pattern">(ilp|ILP)</param>
+            </data>
+          </except>
+        </data>
+      </attribute>
+      <element name="value">
+        <ref name="expression"/>
+      </element>
+    </element>
+  </define>
+  <define name="invocation">
+    <element name="invocation">
+      <element name="function">
+        <ref name="expression"/>
+      </element>
+      <element name="arguments">
+        <zeroOrMore>
+          <ref name="expression"/>
+        </zeroOrMore>
+      </element>
+    </element>
+  </define>
+  <define name="try">
+    <element name="try">
+      <element name="body">
+        <oneOrMore>
+          <ref name="expression"/>
+        </oneOrMore>
+      </element>
+      <choice>
+        <ref name="catch"/>
+        <ref name="finally"/>
+        <group>
+          <ref name="catch"/>
+          <ref name="finally"/>
+        </group>
+      </choice>
+    </element>
+  </define>
+  <define name="catch">
+    <element name="catch">
+      <attribute name="exception">
+        <data type="Name">
+          <except>
+            <data type="Name">
+              <param name="pattern">(ilp|ILP)</param>
+            </data>
+          </except>
+        </data>
+      </attribute>
+      <oneOrMore>
+        <ref name="expression"/>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="finally">
+    <element name="finally">
+      <oneOrMore>
+        <ref name="expression"/>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="variable">
+    <element name="variable">
+      <attribute name="name">
+        <data type="Name">
+          <except>
+            <data type="Name">
+              <param name="pattern">(ilp|ILP)</param>
+            </data>
+          </except>
+        </data>
+      </attribute>
+      <empty/>
+    </element>
+  </define>
+  <define name="operation">
+    <choice>
+      <ref name="unaryOperation"/>
+      <ref name="binaryOperation"/>
+    </choice>
+  </define>
+  <define name="unaryOperation">
+    <element name="unaryOperation">
+      <attribute name="operator">
+        <choice>
+          <value>-</value>
+          <value>!</value>
+        </choice>
+      </attribute>
+      <element name="operand">
+        <ref name="expression"/>
+      </element>
+    </element>
+  </define>
+  <define name="binaryOperation">
+    <element name="binaryOperation">
+      <element name="leftOperand">
+        <ref name="expression"/>
+      </element>
+      <attribute name="operator">
+        <choice>
+          <value>+</value>
+          <value>-</value>
+          <value>*</value>
+          <value>/</value>
+          <value>%</value>
+          <!-- arithmetic -->
+          <value>|</value>
+          <value>&amp;</value>
+          <value>^</value>
+          <!-- booleans -->
+          <value>&lt;</value>
+          <value>&lt;=</value>
+          <value>==</value>
+          <value>&gt;=</value>
+          <value>&gt;</value>
+          <value>&lt;&gt;</value>
+          <value>!=</value>
+        </choice>
+        <!-- comparison -->
+      </attribute>
+      <element name="rightOperand">
+        <ref name="expression"/>
+      </element>
+    </element>
+  </define>
+  <define name="constant">
+    <choice>
+      <element name="integer">
+        <attribute name="value">
+          <data type="integer"/>
+        </attribute>
+        <empty/>
+      </element>
+      <element name="float">
+        <attribute name="value">
+          <data type="float"/>
+        </attribute>
+        <empty/>
+      </element>
+      <element name="string">
+        <text/>
+      </element>
+      <element name="boolean">
+        <attribute name="value">
+          <choice>
+            <value>true</value>
+            <value>false</value>
+          </choice>
+        </attribute>
+        <empty/>
+      </element>
+    </choice>
+  </define>
+  <define name="program">
+    <a:documentation>Program</a:documentation>
+    <element name="program">
+      <zeroOrMore>
+        <ref name="functionDefinition"/>
+      </zeroOrMore>
+      <oneOrMore>
+        <ref name="expression"/>
+      </oneOrMore>
+    </element>
+  </define>
+</grammar>
+<!-- end of grammar3.rnc -->

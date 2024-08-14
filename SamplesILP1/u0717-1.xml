@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id$
+(expected-result 717)
+(xor 717 #f)
+
+;;; end of u0717-1.scm
+
+ -->
+<program
+><!-- test:result value='717' 
+--><binaryOperation operator='^'
+><leftOperand
+><integer value='717'
+/></leftOperand
+><rightOperand
+><boolean value='false'
+/></rightOperand
+></binaryOperation
+></program
+>

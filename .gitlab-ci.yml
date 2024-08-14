@@ -1,0 +1,76 @@
+image: dlp
+
+stages:
+- cours
+- tme
+
+
+ILP1:
+  stage: cours
+  script: >
+    /home/dlp/run.sh -id ILP1 -name ILP1
+    com.paracamplus.ilp1.interpreter.test.InterpreterTest
+    com.paracamplus.ilp1.compiler.test.CompilerTest
+  artifacts:
+    reports:
+      junit: report.xml
+
+ILP2:
+  stage: cours
+  script: >
+    /home/dlp/run.sh -id ILP2 -name ILP2
+    com.paracamplus.ilp2.interpreter.test.InterpreterTest
+    com.paracamplus.ilp2.compiler.test.CompilerTest
+  artifacts:
+    reports:
+      junit: report.xml
+
+ILP3:
+  stage: cours
+  script: >
+    /home/dlp/run.sh -id ILP3 -name ILP3
+    com.paracamplus.ilp3.interpreter.test.InterpreterTest
+    com.paracamplus.ilp3.compiler.test.CompilerTest
+  artifacts:
+    reports:
+      junit: report.xml
+
+ILP4:
+  stage: cours
+  script: >
+    /home/dlp/run.sh -id ILP4 -name ILP4
+    com.paracamplus.ilp4.interpreter.test.InterpreterTest
+    com.paracamplus.ilp4.compiler.test.CompilerTest
+  artifacts:
+    reports:
+      junit: report.xml
+
+TME8:
+  stage: tme
+  script: >
+    /home/dlp/run.sh -id TME8 -name TME8
+    com.paracamplus.ilp4.ilp4tme8.interpreter.test.InterpreterTest
+    com.paracamplus.ilp4.ilp4tme8.compiler.test.CompilerTest
+  artifacts:
+    reports:
+      junit: report.xml      
+
+TME9:
+  stage: tme
+  script: >
+    /home/dlp/run.sh -id TME9 -name TME9
+    com.paracamplus.ilp4.ilp4tme9.compiler.test.CompilerAvecGlobalCacheTest
+    com.paracamplus.ilp4.ilp4tme9.compiler.test.CompilerAvecSiteCacheTest
+  artifacts:
+    reports:
+      junit: report.xml      
+
+TME10:
+  stage: tme
+  script: >
+    /home/dlp/run.sh -id TME10 -name TME10
+    com.paracamplus.ilp4.ilp4tme10.interpreter.test.InterpreterTest
+    com.paracamplus.ilp4.ilp4tme10.compiler.test.CompilerTest
+  artifacts:
+    reports:
+      junit: report.xml

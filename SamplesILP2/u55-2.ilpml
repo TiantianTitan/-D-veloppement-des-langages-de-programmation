@@ -1,0 +1,6 @@
+function dou_ble(x)
+(
+  2 * x
+);
+
+dou_ble(52 + 3)

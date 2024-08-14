@@ -1,0 +1,2 @@
+try ("a" > 2)
+catch (exc) print("OK")

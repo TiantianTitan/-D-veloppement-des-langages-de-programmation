@@ -1,0 +1,151 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id: u819-6.scm 405 2006-09-13 17:21:53Z queinnec $
+(comment "invocation methode inexistante")
+(expected-result 819)
+
+(defclass Point Object
+  (x y)
+  (define (longueur)
+    (+ (oget (self) "x") (oget (self) "y")) )
+  (define (m1 z t)
+    (+ (* z (oget (self) "x"))
+       (* t (oget (self) "y")) ) ) )
+
+;;; La compilation engendre un objet ILP_object_nexistePas_method ce
+;;; qui provoque une erreur statique dans gcc. On truande pour ce test
+;;; en forcant la creation (par ailleurs) de cet objet.
+(defclass Truc Object
+  ()
+  (define (nexistePas x) x)
+)
+
+(let ((point (new Point 2 3)))
+  (try-catch-finally
+   (send "nexistePas" point 23)
+   (lambda (e) #t)
+   #f )
+  819 )
+
+;;; end of u819-6.scm
+
+ -->
+<program
+><!-- test:name description='invocation methode inexistante' 
+--><!-- test:result value='819' 
+--><classDefinition name='Point' parent='Object'
+><fields
+><field name='x'
+/><field name='y'
+/></fields
+><methods
+><method name='longueur'
+><variables
+></variables
+><body
+><binaryOperation operator='+'
+><leftOperand
+><fieldRead field='x'
+><target
+><self
+/></target
+></fieldRead
+></leftOperand
+><rightOperand
+><fieldRead field='y'
+><target
+><self
+/></target
+></fieldRead
+></rightOperand
+></binaryOperation
+></body
+></method
+><method name='m1'
+><variables
+><variable name='z'
+/><variable name='t'
+/></variables
+><body
+><binaryOperation operator='+'
+><leftOperand
+><binaryOperation operator='*'
+><leftOperand
+><variable name='z'
+/></leftOperand
+><rightOperand
+><fieldRead field='x'
+><target
+><self
+/></target
+></fieldRead
+></rightOperand
+></binaryOperation
+></leftOperand
+><rightOperand
+><binaryOperation operator='*'
+><leftOperand
+><variable name='t'
+/></leftOperand
+><rightOperand
+><fieldRead field='y'
+><target
+><self
+/></target
+></fieldRead
+></rightOperand
+></binaryOperation
+></rightOperand
+></binaryOperation
+></body
+></method
+></methods
+></classDefinition
+><classDefinition name='Truc' parent='Object'
+><fields
+></fields
+><methods
+><method name='nexistePas'
+><variables
+><variable name='x'
+/></variables
+><body
+><variable name='x'
+/></body
+></method
+></methods
+></classDefinition
+><block
+><bindings
+><binding
+><variable name='point'
+/><initialisation
+><instantiation class='Point'
+><integer value='2'
+/><integer value='3'
+/></instantiation
+></initialisation
+></binding
+></bindings
+><body
+><try
+><body
+><send message='nexistePas'
+><receiver
+><variable name='point'
+/></receiver
+><arguments
+><integer value='23'
+/></arguments
+></send
+></body
+><catch exception='e'
+><boolean value='true'
+/></catch
+></try
+><integer value='819'
+/></body
+></block
+></program
+>

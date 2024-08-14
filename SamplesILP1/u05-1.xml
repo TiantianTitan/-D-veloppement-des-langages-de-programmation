@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id: u05-1.scm 405 2006-09-13 17:21:53Z queinnec $
+(comment "constante chaine de caracteres" "foobar")
+"foobar"
+
+;;; end of u5-1.scm
+
+ -->
+<program
+><!-- test:name description='constante chaine de caracteres' 
+--><string
+>foobar</string
+></program
+>

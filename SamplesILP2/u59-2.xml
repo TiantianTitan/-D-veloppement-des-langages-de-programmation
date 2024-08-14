@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id: u59-2.scm 405 2006-09-13 17:21:53Z queinnec $
+(comment "variable globale non fonctionnelle")
+(let ((x 1))
+  (set! g 59)
+  g )
+
+;;; end of u59-2.scm
+
+ -->
+<program
+><!-- test:name description='variable globale non fonctionnelle' 
+--><block
+><bindings
+><binding
+><variable name='x'
+/><initialisation
+><integer value='1'
+/></initialisation
+></binding
+></bindings
+><body
+><assignment name='g'
+><value
+><integer value='59'
+/></value
+></assignment
+><variable name='g'
+/></body
+></block
+></program
+>

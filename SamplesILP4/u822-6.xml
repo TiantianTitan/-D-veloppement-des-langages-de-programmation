@@ -1,0 +1,134 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id: u822-6.scm 405 2006-09-13 17:21:53Z queinnec $
+(comment "sous-classe PointColore sans methode, lecture/ecriture champ propre")
+(expected-result 822)
+
+(defclass Point Object
+  (x y)
+  (define (longueur)
+    (+ (oget (self) "x") (oget (self) "y")) )
+  (define (m1 z t)
+    (+ (* z (oget (self) "x"))
+       (* t (oget (self) "y")) ) ) )
+
+(defclass PointColore Point
+  (color) )
+(let ((pc (new PointColore 11 22 "red")))
+  (oset! pc "color" 822)
+  (oget pc "color") )
+
+;;; end of u822-6.scm
+
+ -->
+<program
+><!-- test:name description='sous-classe PointColore sans methode, lecture/ecriture champ propre' 
+--><!-- test:result value='822' 
+--><classDefinition name='Point' parent='Object'
+><fields
+><field name='x'
+/><field name='y'
+/></fields
+><methods
+><method name='longueur'
+><variables
+></variables
+><body
+><binaryOperation operator='+'
+><leftOperand
+><fieldRead field='x'
+><target
+><self
+/></target
+></fieldRead
+></leftOperand
+><rightOperand
+><fieldRead field='y'
+><target
+><self
+/></target
+></fieldRead
+></rightOperand
+></binaryOperation
+></body
+></method
+><method name='m1'
+><variables
+><variable name='z'
+/><variable name='t'
+/></variables
+><body
+><binaryOperation operator='+'
+><leftOperand
+><binaryOperation operator='*'
+><leftOperand
+><variable name='z'
+/></leftOperand
+><rightOperand
+><fieldRead field='x'
+><target
+><self
+/></target
+></fieldRead
+></rightOperand
+></binaryOperation
+></leftOperand
+><rightOperand
+><binaryOperation operator='*'
+><leftOperand
+><variable name='t'
+/></leftOperand
+><rightOperand
+><fieldRead field='y'
+><target
+><self
+/></target
+></fieldRead
+></rightOperand
+></binaryOperation
+></rightOperand
+></binaryOperation
+></body
+></method
+></methods
+></classDefinition
+><classDefinition name='PointColore' parent='Point'
+><fields
+><field name='color'
+/></fields
+><methods
+></methods
+></classDefinition
+><block
+><bindings
+><binding
+><variable name='pc'
+/><initialisation
+><instantiation class='PointColore'
+><integer value='11'
+/><integer value='22'
+/><string
+>red</string
+></instantiation
+></initialisation
+></binding
+></bindings
+><body
+><fieldWrite field='color'
+><target
+><variable name='pc'
+/></target
+><value
+><integer value='822'
+/></value
+></fieldWrite
+><fieldRead field='color'
+><target
+><variable name='pc'
+/></target
+></fieldRead
+></body
+></block
+></program
+>

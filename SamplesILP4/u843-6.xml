@@ -1,0 +1,148 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id: u843-6.scm 620 2007-01-07 14:24:50Z queinnec $
+(comment "super(arg1 arg2) avec une classe entre")
+(expected-result 843)
+
+(defclass Point Object
+  (x)
+  (define (m1 t u)
+    (+ u (oget (self) "x"))) )
+
+(defclass Point2D Point
+  (y) )
+
+(defclass Point3D Point2D
+  (z)
+  (define (m1 t u)
+    (+ (oget (self) "y")
+       (+ t
+          (* (oget (self) "z")
+             (super) ) ) ) ) )
+
+(let ((pc (new Point3D 8 -1 84)))
+  (try-catch-finally
+   (send "m1" pc 4 2) ; -1 + 4 + 84*(2+8)
+   (lambda (e) #f)
+   #f ) )
+
+;;; end of u843-6.scm
+
+ -->
+<program
+><!-- test:name description='super(arg1 arg2) avec une classe entre' 
+--><!-- test:result value='843' 
+--><classDefinition name='Point' parent='Object'
+><fields
+><field name='x'
+/></fields
+><methods
+><method name='m1'
+><variables
+><variable name='t'
+/><variable name='u'
+/></variables
+><body
+><binaryOperation operator='+'
+><leftOperand
+><variable name='u'
+/></leftOperand
+><rightOperand
+><fieldRead field='x'
+><target
+><self
+/></target
+></fieldRead
+></rightOperand
+></binaryOperation
+></body
+></method
+></methods
+></classDefinition
+><classDefinition name='Point2D' parent='Point'
+><fields
+><field name='y'
+/></fields
+><methods
+></methods
+></classDefinition
+><classDefinition name='Point3D' parent='Point2D'
+><fields
+><field name='z'
+/></fields
+><methods
+><method name='m1'
+><variables
+><variable name='t'
+/><variable name='u'
+/></variables
+><body
+><binaryOperation operator='+'
+><leftOperand
+><fieldRead field='y'
+><target
+><self
+/></target
+></fieldRead
+></leftOperand
+><rightOperand
+><binaryOperation operator='+'
+><leftOperand
+><variable name='t'
+/></leftOperand
+><rightOperand
+><binaryOperation operator='*'
+><leftOperand
+><fieldRead field='z'
+><target
+><self
+/></target
+></fieldRead
+></leftOperand
+><rightOperand
+><super
+/></rightOperand
+></binaryOperation
+></rightOperand
+></binaryOperation
+></rightOperand
+></binaryOperation
+></body
+></method
+></methods
+></classDefinition
+><block
+><bindings
+><binding
+><variable name='pc'
+/><initialisation
+><instantiation class='Point3D'
+><integer value='8'
+/><integer value='-1'
+/><integer value='84'
+/></instantiation
+></initialisation
+></binding
+></bindings
+><body
+><try
+><body
+><send message='m1'
+><receiver
+><variable name='pc'
+/></receiver
+><arguments
+><integer value='4'
+/><integer value='2'
+/></arguments
+></send
+></body
+><catch exception='e'
+><boolean value='false'
+/></catch
+></try
+></body
+></block
+></program
+>

@@ -1,0 +1,141 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id$
+(comment "mutable closed variable")
+(define (mkcounter start)
+  (lambda ()
+    (set! start (+ start 1))
+    start ) )
+(let ((c1 (mkcounter 0))
+      (c2 (mkcounter 10)) )
+  (c1) (c2) (c2) (c1) (c2)
+  (= (+ 11 (c1)) (c2)) )
+
+;;; end of u75089-5.scm
+
+ -->
+<program
+><!-- test:name description='mutable closed variable' 
+--><functionDefinition name='mkcounter'
+><variables
+><variable name='start'
+/></variables
+><body
+><lambda
+><variables
+></variables
+><body
+><assignment name='start'
+><value
+><binaryOperation operator='+'
+><leftOperand
+><variable name='start'
+/></leftOperand
+><rightOperand
+><integer value='1'
+/></rightOperand
+></binaryOperation
+></value
+></assignment
+><variable name='start'
+/></body
+></lambda
+></body
+></functionDefinition
+><block
+><bindings
+><binding
+><variable name='c1'
+/><initialisation
+><invocation
+><function
+><variable name='mkcounter'
+/></function
+><arguments
+><integer value='0'
+/></arguments
+></invocation
+></initialisation
+></binding
+><binding
+><variable name='c2'
+/><initialisation
+><invocation
+><function
+><variable name='mkcounter'
+/></function
+><arguments
+><integer value='10'
+/></arguments
+></invocation
+></initialisation
+></binding
+></bindings
+><body
+><invocation
+><function
+><variable name='c1'
+/></function
+><arguments
+></arguments
+></invocation
+><invocation
+><function
+><variable name='c2'
+/></function
+><arguments
+></arguments
+></invocation
+><invocation
+><function
+><variable name='c2'
+/></function
+><arguments
+></arguments
+></invocation
+><invocation
+><function
+><variable name='c1'
+/></function
+><arguments
+></arguments
+></invocation
+><invocation
+><function
+><variable name='c2'
+/></function
+><arguments
+></arguments
+></invocation
+><binaryOperation operator='=='
+><leftOperand
+><binaryOperation operator='+'
+><leftOperand
+><integer value='11'
+/></leftOperand
+><rightOperand
+><invocation
+><function
+><variable name='c1'
+/></function
+><arguments
+></arguments
+></invocation
+></rightOperand
+></binaryOperation
+></leftOperand
+><rightOperand
+><invocation
+><function
+><variable name='c2'
+/></function
+><arguments
+></arguments
+></invocation
+></rightOperand
+></binaryOperation
+></body
+></block
+></program
+>

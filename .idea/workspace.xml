@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b83b79c3-bf23-4a1c-9c3b-443bef6512d0" name="更改" comment="TME9 compiler fini">
+      <change beforePath="$PROJECT_DIR$/.gitlab-ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.gitlab-ci.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/src/com/paracamplus/ilp4/ilp4tme10/ast/ASTdefinedTME10.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/src/com/paracamplus/ilp4/ilp4tme10/ast/ASTexistsTME10.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/src/com/paracamplus/ilp4/ilp4tme10/ast/ASTfactoryTME10.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/src/com/paracamplus/ilp4/ilp4tme10/ast/ASTfactoryTME10.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/src/com/paracamplus/ilp4/ilp4tme10/compiler/CompilerTME10.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/src/com/paracamplus/ilp4/ilp4tme10/compiler/CompilerTME10.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/src/com/paracamplus/ilp4/ilp4tme10/compiler/FreeVariableCollectorTME10.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/src/com/paracamplus/ilp4/ilp4tme10/compiler/FreeVariableCollectorTME10.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/src/com/paracamplus/ilp4/ilp4tme10/compiler/GlobalVariableCollectorTME10.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/src/com/paracamplus/ilp4/ilp4tme10/compiler/GlobalVariableCollectorTME10.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/src/com/paracamplus/ilp4/ilp4tme10/compiler/interfaces/IASTCvisitorTME10.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/src/com/paracamplus/ilp4/ilp4tme10/compiler/interfaces/IASTCvisitorTME10.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/src/com/paracamplus/ilp4/ilp4tme10/compiler/normalizer/INormalizationFactoryTME10.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/src/com/paracamplus/ilp4/ilp4tme10/compiler/normalizer/INormalizationFactoryTME10.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/src/com/paracamplus/ilp4/ilp4tme10/compiler/normalizer/NormalizationFactoryTME10.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/src/com/paracamplus/ilp4/ilp4tme10/compiler/normalizer/NormalizationFactoryTME10.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/src/com/paracamplus/ilp4/ilp4tme10/compiler/normalizer/NormalizerTME10.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/src/com/paracamplus/ilp4/ilp4tme10/compiler/normalizer/NormalizerTME10.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/src/com/paracamplus/ilp4/ilp4tme10/compiler/test/CompilerTestTME10.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/src/com/paracamplus/ilp4/ilp4tme10/interfaces/IASTdefinedTME10.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/src/com/paracamplus/ilp4/ilp4tme10/interfaces/IASTexistsTME10.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/src/com/paracamplus/ilp4/ilp4tme10/interfaces/IASTfactoryTME10.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/src/com/paracamplus/ilp4/ilp4tme10/interfaces/IASTfactoryTME10.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/src/com/paracamplus/ilp4/ilp4tme10/interfaces/IASTvisitorTME10.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/src/com/paracamplus/ilp4/ilp4tme10/interfaces/IASTvisitorTME10.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/src/com/paracamplus/ilp4/ilp4tme10/interpreter/GlobalVariableCollectorInterpreterTME10.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/src/com/paracamplus/ilp4/ilp4tme10/interpreter/GlobalVariableCollectorInterpreterTME10.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/src/com/paracamplus/ilp4/ilp4tme10/interpreter/InterpreterTME10.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/src/com/paracamplus/ilp4/ilp4tme10/interpreter/InterpreterTME10.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/src/com/paracamplus/ilp4/ilp4tme10/interpreter/test/InterpreterTestTME10.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/src/com/paracamplus/ilp4/ilp4tme10/parser/ilpml/ILPMLListenerTME10.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/src/com/paracamplus/ilp4/ilp4tme10/parser/ilpml/ILPMLListenerTME10.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/src/com/paracamplus/ilp4/ilp4tme10/parser/ilpml/ILPMLParserTME10.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/src/com/paracamplus/ilp4/ilp4tme10/parser/ilpml/ILPMLParserTME10.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2Ya86lhbTtsd4L9jwCzpnIiInSX" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/weida/git/ilp4/Java/src/com/paracamplus/ilp4/ilp4tme9/compiler&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Java/src/com/paracamplus/ilp4/ilp4tme9/compiler" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Java/src/com/paracamplus/ilp4/ilp4tme9/C" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.InterpreterTest (1)">
+    <configuration name="CompilerAvecGlobalCacheTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ILP4" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.paracamplus.ilp4.ilp4tme9.compiler.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.paracamplus.ilp4.ilp4tme9.compiler.test" />
+      <option name="MAIN_CLASS_NAME" value="com.paracamplus.ilp4.ilp4tme9.compiler.test.CompilerAvecGlobalCacheTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CompilerAvecSiteCacheTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ILP4" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.paracamplus.ilp4.ilp4tme9.compiler.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.paracamplus.ilp4.ilp4tme9.compiler.test" />
+      <option name="MAIN_CLASS_NAME" value="com.paracamplus.ilp4.ilp4tme9.compiler.test.CompilerAvecSiteCacheTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CompilerTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ILP4" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.paracamplus.ilp4.ilp4tme8.compiler.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.paracamplus.ilp4.ilp4tme8.compiler.test" />
+      <option name="MAIN_CLASS_NAME" value="com.paracamplus.ilp4.ilp4tme8.compiler.test.CompilerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CompilerTest (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ILP4" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.paracamplus.ilp4.ilp4tme10.compiler.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.paracamplus.ilp4.ilp4tme10.compiler.test" />
+      <option name="MAIN_CLASS_NAME" value="com.paracamplus.ilp4.ilp4tme10.compiler.test.CompilerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InterpreterTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ILP4" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.paracamplus.ilp4.ilp4tme10.interpreter.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.paracamplus.ilp4.ilp4tme10.interpreter.test" />
+      <option name="MAIN_CLASS_NAME" value="com.paracamplus.ilp4.ilp4tme10.interpreter.test.InterpreterTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.InterpreterTest (1)" />
+        <item itemvalue="JUnit.CompilerTest (2)" />
+        <item itemvalue="JUnit.CompilerAvecGlobalCacheTest" />
+        <item itemvalue="JUnit.CompilerAvecSiteCacheTest" />
+        <item itemvalue="JUnit.CompilerTest (1)" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="b83b79c3-bf23-4a1c-9c3b-443bef6512d0" name="更改" comment="" />
+      <created>1700752159101</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1700752159101</updated>
+      <workItem from="1700752160102" duration="292000" />
+      <workItem from="1700752601247" duration="17000" />
+      <workItem from="1700752855877" duration="2130000" />
+      <workItem from="1700754987681" duration="4560000" />
+      <workItem from="1701279025820" duration="18000" />
+      <workItem from="1701279495211" duration="1986000" />
+      <workItem from="1701697127366" duration="16000" />
+      <workItem from="1701953769978" duration="1035000" />
+      <workItem from="1701956077859" duration="10071000" />
+      <workItem from="1701969623743" duration="2499000" />
+    </task>
+    <task id="LOCAL-00001" summary="2.3.1 fini~">
+      <option name="closed" value="true" />
+      <created>1700755215160</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1700755215160</updated>
+    </task>
+    <task id="LOCAL-00002" summary="2.3.1 fini encore une fois~">
+      <option name="closed" value="true" />
+      <created>1700755400951</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1700755400951</updated>
+    </task>
+    <task id="LOCAL-00003" summary="2.3.1 fini encore*2 une fois~">
+      <option name="closed" value="true" />
+      <created>1700756410879</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1700756410879</updated>
+    </task>
+    <task id="LOCAL-00004" summary="TME8 test 0.01">
+      <option name="closed" value="true" />
+      <created>1701954718572</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1701954718572</updated>
+    </task>
+    <task id="LOCAL-00005" summary="TME0 compiler">
+      <option name="closed" value="true" />
+      <created>1701959769524</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1701959769524</updated>
+    </task>
+    <task id="LOCAL-00006" summary="TME9 compiler fini">
+      <option name="closed" value="true" />
+      <created>1701963951565</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1701963951565</updated>
+    </task>
+    <task id="LOCAL-00007" summary="TME9 compiler fini">
+      <option name="closed" value="true" />
+      <created>1701966029728</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1701966029728</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="2.3.1 fini~" />
+    <MESSAGE value="2.3.1 fini encore une fois~" />
+    <MESSAGE value="2.3.1 fini encore*2 une fois~" />
+    <MESSAGE value="TME8 test 0.01" />
+    <MESSAGE value="TME0 compiler" />
+    <MESSAGE value="TME9 compiler fini" />
+    <option name="LAST_COMMIT_MESSAGE" value="TME9 compiler fini" />
+  </component>
+</project>

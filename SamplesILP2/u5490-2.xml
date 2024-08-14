@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id$
+(comment "function name to be mangled")
+(define (man:gle n)
+  (/ n 2) )
+(man:gle (* 2 5490))
+;;; end of u5490-2.scm
+
+ -->
+<program
+><!-- test:name description='function name to be mangled' 
+--><functionDefinition name='man:gle'
+><variables
+><variable name='n'
+/></variables
+><body
+><binaryOperation operator='/'
+><leftOperand
+><variable name='n'
+/></leftOperand
+><rightOperand
+><integer value='2'
+/></rightOperand
+></binaryOperation
+></body
+></functionDefinition
+><invocation
+><function
+><variable name='man:gle'
+/></function
+><arguments
+><binaryOperation operator='*'
+><leftOperand
+><integer value='2'
+/></leftOperand
+><rightOperand
+><integer value='5490'
+/></rightOperand
+></binaryOperation
+></arguments
+></invocation
+></program
+>

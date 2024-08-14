@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id$
+(comment "un corps multiple")
+(letrec () 
+  (print "OK")
+  11 )
+
+;;; end of ur11-5.scm
+
+ -->
+<program
+><!-- test:name description='un corps multiple' 
+--><sequence
+><invocation
+><function
+><variable name='print'
+/></function
+><arguments
+><string
+>OK</string
+></arguments
+></invocation
+><integer value='11'
+/></sequence
+></program
+>

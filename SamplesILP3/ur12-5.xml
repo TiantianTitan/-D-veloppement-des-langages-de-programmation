@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id$
+(comment "une definition locale non recursive et non utilisee")
+(letrec ()
+  (define (double x) (+ x x))
+  (print "ok")
+  12 )
+
+;;; end of ur11-5.scm
+
+ -->
+<program
+><!-- test:name description='une definition locale non recursive et non utilisee' 
+--><codefinitions
+><functions
+><functionDefinition name='double'
+><variables
+><variable name='x'
+/></variables
+><body
+><binaryOperation operator='+'
+><leftOperand
+><variable name='x'
+/></leftOperand
+><rightOperand
+><variable name='x'
+/></rightOperand
+></binaryOperation
+></body
+></functionDefinition
+></functions
+><body
+><invocation
+><function
+><variable name='print'
+/></function
+><arguments
+><string
+>ok</string
+></arguments
+></invocation
+><integer value='12'
+/></body
+></codefinitions
+></program
+>

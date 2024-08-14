@@ -1,0 +1,4 @@
+(
+  let n = 7507 in
+  lambda () (n = n + 1; n)
+) ()

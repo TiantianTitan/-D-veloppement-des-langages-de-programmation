@@ -1,0 +1,14 @@
+let x = 5 in
+(
+  while (x < 53) do
+  (
+    print(x);
+    x = 2 * x;
+    while (x > 53) do
+    (
+      print(x);
+      x = x - 3
+    )
+  );
+  x
+)

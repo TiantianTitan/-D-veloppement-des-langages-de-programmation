@@ -1,0 +1,1 @@
+type_of( lambda(x) (x+1) )

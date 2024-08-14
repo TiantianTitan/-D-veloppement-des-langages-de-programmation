@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id: u61-3.scm 405 2006-09-13 17:21:53Z queinnec $
+(comment "le finally tourne")
+(let ((x 1))
+  (try-catch-finally
+    x
+    #f
+    (set! x 3) )
+  (print x)
+  (= x 3) )
+
+;;; end of u61-3.scm
+
+ -->
+<program
+><!-- test:name description='le finally tourne' 
+--><block
+><bindings
+><binding
+><variable name='x'
+/><initialisation
+><integer value='1'
+/></initialisation
+></binding
+></bindings
+><body
+><try
+><body
+><variable name='x'
+/></body
+><finally
+><assignment name='x'
+><value
+><integer value='3'
+/></value
+></assignment
+></finally
+></try
+><invocation
+><function
+><variable name='print'
+/></function
+><arguments
+><variable name='x'
+/></arguments
+></invocation
+><binaryOperation operator='=='
+><leftOperand
+><variable name='x'
+/></leftOperand
+><rightOperand
+><integer value='3'
+/></rightOperand
+></binaryOperation
+></body
+></block
+></program
+>

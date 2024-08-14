@@ -1,0 +1,6 @@
+function deuxfois(x)
+(
+  2 * x
+);
+
+deuxfois(27)

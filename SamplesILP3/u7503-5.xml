@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id$
+(comment "lambda closing one variable, applied out of scope, using one local variable")
+(let ((x 3))
+  ((let ((f (lambda (y) (+ x y))))
+     f )
+   7500 ) )
+
+;;; end of u7503-5.scm
+
+ -->
+<program
+><!-- test:name description='lambda closing one variable, applied out of scope, using one local variable' 
+--><block
+><bindings
+><binding
+><variable name='x'
+/><initialisation
+><integer value='3'
+/></initialisation
+></binding
+></bindings
+><body
+><invocation
+><function
+><block
+><bindings
+><binding
+><variable name='f'
+/><initialisation
+><lambda
+><variables
+><variable name='y'
+/></variables
+><body
+><binaryOperation operator='+'
+><leftOperand
+><variable name='x'
+/></leftOperand
+><rightOperand
+><variable name='y'
+/></rightOperand
+></binaryOperation
+></body
+></lambda
+></initialisation
+></binding
+></bindings
+><body
+><variable name='f'
+/></body
+></block
+></function
+><arguments
+><integer value='7500'
+/></arguments
+></invocation
+></body
+></block
+></program
+>

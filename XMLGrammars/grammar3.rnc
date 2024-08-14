@@ -1,0 +1,146 @@
+namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
+
+# -*- coding: utf-8 -*-
+# ******************************************************************
+# ILP9 - Implantation d'un langage de programmation.
+# by Christian.Queinnec@paracamplus.com
+# See http://mooc.paracamplus.com/ilp9
+# GPL version 3
+# ****************************************************************** 
+start = program
+functionDefinition =
+  element functionDefinition {
+    attribute name {
+      xsd:Name - (xsd:Name { pattern = "(ilp|ILP)" })
+    },
+    element variables { variable* },
+    element body { expression+ }
+  }
+expression =
+  alternative
+  | sequence
+  | block
+  | loop
+  | try
+  | variable
+  | assignment
+  | invocation
+  | constant
+  | operation
+  | invocation
+  | codefinitions
+  | lambda
+alternative =
+  element alternative {
+    element condition { expression },
+    element consequence { expression+ },
+    element alternant { expression+ }?
+  }
+sequence = element sequence { expression+ }
+block =
+  element block {
+    element bindings {
+      element binding {
+        variable,
+        element initialisation { expression }
+      }*
+    },
+    element body { expression+ }
+  }
+codefinitions =
+  element codefinitions {
+    element functions { functionDefinition* },
+    element body { expression+ }
+  }
+lambda =
+  element lambda {
+    element variables { variable* },
+    element body { expression+ }
+  }
+loop =
+  element loop {
+    element condition { expression },
+    element body { expression+ }
+  }
+assignment =
+  element assignment {
+    attribute name {
+      xsd:Name - (xsd:Name { pattern = "(ilp|ILP)" })
+    },
+    element value { expression }
+  }
+invocation =
+  element invocation {
+    element function { expression },
+    element arguments { expression* }
+  }
+try =
+  element try {
+    element body { expression+ },
+    (catch | finally | (catch, finally))
+  }
+catch =
+  element catch {
+    attribute exception {
+      xsd:Name - (xsd:Name { pattern = "(ilp|ILP)" })
+    },
+    expression+
+  }
+finally = element finally { expression+ }
+variable =
+  element variable {
+    attribute name {
+      xsd:Name - (xsd:Name { pattern = "(ilp|ILP)" })
+    },
+    empty
+  }
+operation = unaryOperation | binaryOperation
+unaryOperation =
+  element unaryOperation {
+    attribute operator { "-" | "!" },
+    element operand { expression }
+  }
+binaryOperation =
+  element binaryOperation {
+    element leftOperand { expression },
+    attribute operator {
+      ("+"
+       | "-"
+       | "*"
+       | "/"
+       | "%"
+       | # arithmetic
+         "|"
+       | "&"
+       | "^"
+       | # booleans
+         "<"
+       | "<="
+       | "=="
+       | ">="
+       | ">"
+       | "<>"
+       | "!=")
+      # comparison
+      
+    },
+    element rightOperand { expression }
+  }
+constant =
+  element integer {
+    attribute value { xsd:integer },
+    empty
+  }
+  | element float {
+      attribute value { xsd:float },
+      empty
+    }
+  | element string { text }
+  | element boolean {
+      attribute value { "true" | "false" },
+      empty
+    }
+
+## Program
+program = element program { functionDefinition*, expression+ }
+# end of grammar3.rnc

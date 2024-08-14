@@ -1,0 +1,96 @@
+Les valeurs moyennes de temps d'exécution obtenues pour les trois tests sont les suivantes :
+
+Site Cache   
+test1: 120.4306693333333  ms  
+test2: 321.4676616666667  ms
+
+Global Cache   
+test1: 124.9993336666667  ms
+test2: 338.1939903333333	ms
+
+Pour le test 1, Site Cache améliore les performances de 3,8 % par rapport à Global Cache.
+
+Pour le test 2, Site Cache améliore les performances de 5,2 % par rapport à Global Cache.
+
+
+Les données brutes sont les suivantes :
+
+Site Cache 
+
+test1
+
+1e
+Reading: Temps d'exécution: 97.175003 milliseconde
+Cache Appelle: 50001 
+Cache Manque: 2 
+Taux de Hit: 99.996000 
+
+2e
+Reading: Temps d'exécution: 134.082001 milliseconde
+ Cache Appelle: 50001 
+Cache Manque: 2 
+Taux de Hit: 99.996000 
+
+3e
+Reading: Temps d'exécution: 130.035004 milliseconde
+ Cache Appelle: 50001 
+Cache Manque: 2 
+Taux de Hit: 99.996000 
+
+test 2
+1e
+Reading: Temps d'exécution: 315.436981 milliseconde
+Cache Appelle: 300001 
+Cache Manque: 4 
+Taux de Hit: 99.998667 
+
+2e
+Reading: Temps d'exécution: 333.684998 milliseconde
+ Cache Appelle: 300001 
+Cache Manque: 4 
+Taux de Hit: 99.998667 
+
+3e
+Reading: Temps d'exécution: 315.281006 milliseconde
+ Cache Appelle: 300001 
+Cache Manque: 4 
+Taux de Hit: 99.998667 
+
+Global Cache   
+test1
+1e
+Reading: Temps d'exécution: 108.885002 milliseconde
+Cache Appelle: 0 
+Cache Manque: 0 
+Taux de Hit: -nan 
+
+2e
+Temps d'exécution: 127.189003 milliseconde
+ Cache Appelle: 0 
+Cache Manque: 0 
+Taux de Hit: -nan 
+
+3e
+Reading: Temps d'exécution: 138.923996 milliseconde
+ Cache Appelle: 0 
+Cache Manque: 0 
+Taux de Hit: -nan 
+
+test2
+1e
+Reading: Temps d'exécution: 326.654999 milliseconde
+Cache Appelle: 0 
+Cache Manque: 0 
+Taux de Hit: -nan 
+
+2e
+Reading: Temps d'exécution: 340.017975 milliseconde
+Cache Appelle: 0 
+Cache Manque: 0 
+Taux de Hit: -nan
+
+3e
+Temps d'exécution: 347.908997 milliseconde
+ Cache Appelle: 0 
+Cache Manque: 0 
+Taux de Hit: -nan 

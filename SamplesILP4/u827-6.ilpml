@@ -1,0 +1,22 @@
+class Point extends Object
+{
+    var x;
+    var y;
+
+    method m2 (u)
+    self.m1(1, u);
+
+    method m1 (z,t)
+    z * self.x + t * self.y;
+}
+
+class PointColore extends Point
+{
+    var color;
+
+    method m1 (z,t)
+    826 + z;
+}
+
+let pc = new PointColore(11, 22, "red") in
+pc.m2(2)

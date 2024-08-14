@@ -1,0 +1,9 @@
+let x = 1 in
+(
+  (
+    try (throw(11); x = 4)
+    finally x = 4 + x
+  );
+  print(x);
+  x == 5
+)

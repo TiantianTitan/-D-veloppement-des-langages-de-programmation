@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id$
+(comment "variable name to be mangled")
+(define (f ma:ngle)
+  (/ ma:ngle 3) )
+(f (* 3 5491))
+;;; end of u5491-2.scm
+
+ -->
+<program
+><!-- test:name description='variable name to be mangled' 
+--><functionDefinition name='f'
+><variables
+><variable name='ma:ngle'
+/></variables
+><body
+><binaryOperation operator='/'
+><leftOperand
+><variable name='ma:ngle'
+/></leftOperand
+><rightOperand
+><integer value='3'
+/></rightOperand
+></binaryOperation
+></body
+></functionDefinition
+><invocation
+><function
+><variable name='f'
+/></function
+><arguments
+><binaryOperation operator='*'
+><leftOperand
+><integer value='3'
+/></leftOperand
+><rightOperand
+><integer value='5491'
+/></rightOperand
+></binaryOperation
+></arguments
+></invocation
+></program
+>

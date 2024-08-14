@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id: u68-3.scm 405 2006-09-13 17:21:53Z queinnec $
+(comment "exception dans catcher")
+(let ((x 1))
+  (try-catch-finally
+    (try-catch-finally
+      (begin 
+        (throw 4)
+        (set! x 44) )
+      (lambda (exc)
+        (throw (* 2 exc)) )
+      (set! x (* 3 x)) )
+    (lambda (exc)
+      (set! x (* 5 (* x exc))) )
+    #f )
+  (print x)
+  (= x 120) )
+
+;;; end of u68-3.scm
+
+ -->
+<program
+><!-- test:name description='exception dans catcher' 
+--><block
+><bindings
+><binding
+><variable name='x'
+/><initialisation
+><integer value='1'
+/></initialisation
+></binding
+></bindings
+><body
+><try
+><body
+><try
+><body
+><sequence
+><invocation
+><function
+><variable name='throw'
+/></function
+><arguments
+><integer value='4'
+/></arguments
+></invocation
+><assignment name='x'
+><value
+><integer value='44'
+/></value
+></assignment
+></sequence
+></body
+><catch exception='exc'
+><invocation
+><function
+><variable name='throw'
+/></function
+><arguments
+><binaryOperation operator='*'
+><leftOperand
+><integer value='2'
+/></leftOperand
+><rightOperand
+><variable name='exc'
+/></rightOperand
+></binaryOperation
+></arguments
+></invocation
+></catch
+><finally
+><assignment name='x'
+><value
+><binaryOperation operator='*'
+><leftOperand
+><integer value='3'
+/></leftOperand
+><rightOperand
+><variable name='x'
+/></rightOperand
+></binaryOperation
+></value
+></assignment
+></finally
+></try
+></body
+><catch exception='exc'
+><assignment name='x'
+><value
+><binaryOperation operator='*'
+><leftOperand
+><integer value='5'
+/></leftOperand
+><rightOperand
+><binaryOperation operator='*'
+><leftOperand
+><variable name='x'
+/></leftOperand
+><rightOperand
+><variable name='exc'
+/></rightOperand
+></binaryOperation
+></rightOperand
+></binaryOperation
+></value
+></assignment
+></catch
+></try
+><invocation
+><function
+><variable name='print'
+/></function
+><arguments
+><variable name='x'
+/></arguments
+></invocation
+><binaryOperation operator='=='
+><leftOperand
+><variable name='x'
+/></leftOperand
+><rightOperand
+><integer value='120'
+/></rightOperand
+></binaryOperation
+></body
+></block
+></program
+>

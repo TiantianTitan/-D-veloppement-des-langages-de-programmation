@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id: u55-2.scm 405 2006-09-13 17:21:53Z queinnec $
+(comment "une fonction globale presque nommee double")
+(define (dou_ble x)
+  (* 2 x) )
+(dou_ble (+ 52 3))
+
+;;; end of u55-2.scm
+
+ -->
+<program
+><!-- test:name description='une fonction globale presque nommee double' 
+--><functionDefinition name='dou_ble'
+><variables
+><variable name='x'
+/></variables
+><body
+><binaryOperation operator='*'
+><leftOperand
+><integer value='2'
+/></leftOperand
+><rightOperand
+><variable name='x'
+/></rightOperand
+></binaryOperation
+></body
+></functionDefinition
+><invocation
+><function
+><variable name='dou_ble'
+/></function
+><arguments
+><binaryOperation operator='+'
+><leftOperand
+><integer value='52'
+/></leftOperand
+><rightOperand
+><integer value='3'
+/></rightOperand
+></binaryOperation
+></arguments
+></invocation
+></program
+>

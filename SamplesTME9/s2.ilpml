@@ -1,0 +1,32 @@
+class test extends Object
+{
+    var x;
+
+    method work ()
+    (self.x = self.x + 1; );
+
+    method getX()
+    (self.x);
+}
+
+class test2 extends test
+{
+    var y;
+
+    method work ()
+    (self.x = self.x + self.y; super);
+}
+
+let t1 = new test2(0, 2) and t2 = new test(0) and i = 0 in (
+    while i < 100000 do (
+        try (
+            t1.work();
+            t1.work();
+            t2.work();
+            i = i + 1;
+        ) catch (e) (
+            false
+        )
+    );
+    t1.getX();
+)

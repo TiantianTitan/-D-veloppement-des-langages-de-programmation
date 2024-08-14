@@ -1,0 +1,14 @@
+class Point extends Object
+{
+    var x;
+    var y;
+
+    method longueur ()
+    812;
+
+    method m1 (z,t)
+    z + t;
+}
+
+let point = new Point(11, 22) in
+point.m1(2, point.longueur())

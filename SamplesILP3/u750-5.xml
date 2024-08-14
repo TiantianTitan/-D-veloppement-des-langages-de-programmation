@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id$
+(comment "lambda closing immediately applied in place (ako let)")
+((lambda () 750))
+
+;;; end of u750-5.scm
+
+ -->
+<program
+><!-- test:name description='lambda closing immediately applied in place (ako let)' 
+--><invocation
+><function
+><lambda
+><variables
+></variables
+><body
+><integer value='750'
+/></body
+></lambda
+></function
+><arguments
+></arguments
+></invocation
+></program
+>

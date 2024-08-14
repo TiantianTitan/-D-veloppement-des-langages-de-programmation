@@ -1,0 +1,3 @@
+print(defined(e))
+
+e = 1

@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id: u18-1.scm 405 2006-09-13 17:21:53Z queinnec $
+(comment "operateur binaire <= (resultat vrai)" #t)
+(<= 22 33)
+
+;;; end of u18-1.scm
+
+ -->
+<program
+><!-- test:name description='operateur binaire <= (resultat vrai)' 
+--><binaryOperation operator='&lt;='
+><leftOperand
+><integer value='22'
+/></leftOperand
+><rightOperand
+><integer value='33'
+/></rightOperand
+></binaryOperation
+></program
+>

@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id$
+(comment "closure applied via global")
+(let ((x 21))
+  (set! g (lambda (y) (+ x y))) )
+(g 75000)
+
+;;; end of u75021-5.scm
+
+ -->
+<program
+><!-- test:name description='closure applied via global' 
+--><block
+><bindings
+><binding
+><variable name='x'
+/><initialisation
+><integer value='21'
+/></initialisation
+></binding
+></bindings
+><body
+><assignment name='g'
+><value
+><lambda
+><variables
+><variable name='y'
+/></variables
+><body
+><binaryOperation operator='+'
+><leftOperand
+><variable name='x'
+/></leftOperand
+><rightOperand
+><variable name='y'
+/></rightOperand
+></binaryOperation
+></body
+></lambda
+></value
+></assignment
+></body
+></block
+><invocation
+><function
+><variable name='g'
+/></function
+><arguments
+><integer value='75000'
+/></arguments
+></invocation
+></program
+>

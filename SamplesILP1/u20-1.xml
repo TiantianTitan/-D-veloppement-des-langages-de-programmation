@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id: u20-1.scm 405 2006-09-13 17:21:53Z queinnec $
+(comment "operateur binaire <= (resultat faux)" #f)
+(<= 45 44)
+
+;;; end of u20-1.scm
+
+ -->
+<program
+><!-- test:name description='operateur binaire <= (resultat faux)' 
+--><binaryOperation operator='&lt;='
+><leftOperand
+><integer value='45'
+/></leftOperand
+><rightOperand
+><integer value='44'
+/></rightOperand
+></binaryOperation
+></program
+>

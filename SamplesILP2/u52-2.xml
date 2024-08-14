@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id: u52-2.scm 405 2006-09-13 17:21:53Z queinnec $
+(comment "boucle tant-que")
+(let ((x 50))
+  (while (< x 52)
+    (set! x (+ x 1)) )
+  x )
+  
+;;; end of u52-2.scm
+
+ -->
+<program
+><!-- test:name description='boucle tant-que' 
+--><block
+><bindings
+><binding
+><variable name='x'
+/><initialisation
+><integer value='50'
+/></initialisation
+></binding
+></bindings
+><body
+><loop
+><condition
+><binaryOperation operator='&lt;'
+><leftOperand
+><variable name='x'
+/></leftOperand
+><rightOperand
+><integer value='52'
+/></rightOperand
+></binaryOperation
+></condition
+><body
+><assignment name='x'
+><value
+><binaryOperation operator='+'
+><leftOperand
+><variable name='x'
+/></leftOperand
+><rightOperand
+><integer value='1'
+/></rightOperand
+></binaryOperation
+></value
+></assignment
+></body
+></loop
+><variable name='x'
+/></body
+></block
+></program
+>

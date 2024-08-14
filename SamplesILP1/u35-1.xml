@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id$
+(comment "constante pi existe")
+pi
+
+;;; end of u35-1.scm
+
+ -->
+<program
+><!-- test:name description='constante pi existe' 
+--><variable name='pi'
+/></program
+>

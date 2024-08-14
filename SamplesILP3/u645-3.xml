@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id: u645-3.scm 405 2006-09-13 17:21:53Z queinnec $
+(comment "Le catcher recupere bien une exception interne")
+(expected-result #t)
+(expected-printing 6)
+(let ((x 1))
+  (try-catch-finally
+    (begin 
+      (+ 3 "foo")
+      (set! x 4) )
+    (lambda (exc)
+      (set! x (+ 5 x)) )
+    #f )
+  (print x)
+  (= x 6) )
+
+;;; end of u645-3.scm
+
+ -->
+<program
+><!-- test:name description='Le catcher recupere bien une exception interne' 
+--><!-- test:result value='#t' 
+--><!-- test:printing value='...a faire...' 
+--><block
+><bindings
+><binding
+><variable name='x'
+/><initialisation
+><integer value='1'
+/></initialisation
+></binding
+></bindings
+><body
+><try
+><body
+><sequence
+><binaryOperation operator='+'
+><leftOperand
+><integer value='3'
+/></leftOperand
+><rightOperand
+><string
+>foo</string
+></rightOperand
+></binaryOperation
+><assignment name='x'
+><value
+><integer value='4'
+/></value
+></assignment
+></sequence
+></body
+><catch exception='exc'
+><assignment name='x'
+><value
+><binaryOperation operator='+'
+><leftOperand
+><integer value='5'
+/></leftOperand
+><rightOperand
+><variable name='x'
+/></rightOperand
+></binaryOperation
+></value
+></assignment
+></catch
+></try
+><invocation
+><function
+><variable name='print'
+/></function
+><arguments
+><variable name='x'
+/></arguments
+></invocation
+><binaryOperation operator='=='
+><leftOperand
+><variable name='x'
+/></leftOperand
+><rightOperand
+><integer value='6'
+/></rightOperand
+></binaryOperation
+></body
+></block
+></program
+>

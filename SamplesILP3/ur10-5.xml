@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id$
+(comment "pas de definitions locales")
+(letrec ()
+   10 )
+
+;;; end of ur10-5.scm
+
+ -->
+<program
+><!-- test:name description='pas de definitions locales' 
+--><sequence
+><integer value='10'
+/></sequence
+></program
+>

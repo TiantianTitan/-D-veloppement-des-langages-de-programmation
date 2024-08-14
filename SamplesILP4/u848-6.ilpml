@@ -1,0 +1,43 @@
+class Point extends Object
+{
+    var x;
+
+    method m1 (tt,uu)
+    tt * self.x;
+}
+
+class Point2Da extends Point
+{
+    var y;
+
+    method m1 (ttt,uuu)
+    uuu * self.y;
+}
+
+class Point3Da extends Point2Da
+{
+    var z;
+
+    method m1 (tt,uu)
+    self.z + super;
+}
+
+class Point2Db extends Point
+{
+    var yy;
+
+    method m1 (t,u)
+    u * self.yy;
+}
+
+class Point3Db extends Point2Db
+{
+    var zz;
+
+    method m1 (tt,uu)
+    self.zz * super;
+}
+
+let pc4 = new Point3Da(-2, 100, 23)
+and pc2 = new Point3Db(20, 10, 5) in
+try 275 + pc4.m1(3, 4) + pc2.m1(2, 3) catch (e) false

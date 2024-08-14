@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id: u5991-4gfv.scm 620 2007-01-07 14:24:50Z queinnec $
+(comment "variable globale fonctionnelle et invocation calculee")
+(define (deuxfois x)
+  (* 2 x) )
+(- ((if deuxfois deuxfois deuxfois) 3000) 9)
+
+;;; end of u5991-4trc.scm
+
+ -->
+<program
+><!-- test:name description='variable globale fonctionnelle et invocation calculee' 
+--><functionDefinition name='deuxfois'
+><variables
+><variable name='x'
+/></variables
+><body
+><binaryOperation operator='*'
+><leftOperand
+><integer value='2'
+/></leftOperand
+><rightOperand
+><variable name='x'
+/></rightOperand
+></binaryOperation
+></body
+></functionDefinition
+><binaryOperation operator='-'
+><leftOperand
+><invocation
+><function
+><alternative
+><condition
+><variable name='deuxfois'
+/></condition
+><consequence
+><variable name='deuxfois'
+/></consequence
+><alternant
+><variable name='deuxfois'
+/></alternant
+></alternative
+></function
+><arguments
+><integer value='3000'
+/></arguments
+></invocation
+></leftOperand
+><rightOperand
+><integer value='9'
+/></rightOperand
+></binaryOperation
+></program
+>

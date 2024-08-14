@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id$
+(comment "Binary lambda closing one variable, applied out of scope")
+((let ((x 500))
+   (let ((f (lambda (y z) (+ x (+ y z)))))
+     f ) )
+ 7000 5 )
+
+;;; end of u7505-5.scm
+
+ -->
+<program
+><!-- test:name description='Binary lambda closing one variable, applied out of scope' 
+--><invocation
+><function
+><block
+><bindings
+><binding
+><variable name='x'
+/><initialisation
+><integer value='500'
+/></initialisation
+></binding
+></bindings
+><body
+><block
+><bindings
+><binding
+><variable name='f'
+/><initialisation
+><lambda
+><variables
+><variable name='y'
+/><variable name='z'
+/></variables
+><body
+><binaryOperation operator='+'
+><leftOperand
+><variable name='x'
+/></leftOperand
+><rightOperand
+><binaryOperation operator='+'
+><leftOperand
+><variable name='y'
+/></leftOperand
+><rightOperand
+><variable name='z'
+/></rightOperand
+></binaryOperation
+></rightOperand
+></binaryOperation
+></body
+></lambda
+></initialisation
+></binding
+></bindings
+><body
+><variable name='f'
+/></body
+></block
+></body
+></block
+></function
+><arguments
+><integer value='7000'
+/><integer value='5'
+/></arguments
+></invocation
+></program
+>

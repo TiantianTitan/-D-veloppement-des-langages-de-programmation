@@ -1,0 +1,8 @@
+let x = 50 in
+(
+  while x < 52 do
+  (
+    x = x + 1
+  );
+  x
+)

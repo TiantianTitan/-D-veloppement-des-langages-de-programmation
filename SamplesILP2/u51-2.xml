@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id: u51-2.scm 405 2006-09-13 17:21:53Z queinnec $
+(comment "double affectation")
+(let ((x 49))
+  (print x)
+  (set! x (+ x 1))
+  (print x)
+  (set! x (+ x 1))
+  (print x)
+  x )
+
+;;; end of u51-2.scm
+
+ -->
+<program
+><!-- test:name description='double affectation' 
+--><block
+><bindings
+><binding
+><variable name='x'
+/><initialisation
+><integer value='49'
+/></initialisation
+></binding
+></bindings
+><body
+><invocation
+><function
+><variable name='print'
+/></function
+><arguments
+><variable name='x'
+/></arguments
+></invocation
+><assignment name='x'
+><value
+><binaryOperation operator='+'
+><leftOperand
+><variable name='x'
+/></leftOperand
+><rightOperand
+><integer value='1'
+/></rightOperand
+></binaryOperation
+></value
+></assignment
+><invocation
+><function
+><variable name='print'
+/></function
+><arguments
+><variable name='x'
+/></arguments
+></invocation
+><assignment name='x'
+><value
+><binaryOperation operator='+'
+><leftOperand
+><variable name='x'
+/></leftOperand
+><rightOperand
+><integer value='1'
+/></rightOperand
+></binaryOperation
+></value
+></assignment
+><invocation
+><function
+><variable name='print'
+/></function
+><arguments
+><variable name='x'
+/></arguments
+></invocation
+><variable name='x'
+/></body
+></block
+></program
+>

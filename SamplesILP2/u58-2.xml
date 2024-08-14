@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id: u58-2.scm 405 2006-09-13 17:21:53Z queinnec $
+(comment "bloc local sans liaison")
+(let ()
+  58 )
+
+;;; end of u58-2.scm
+
+ -->
+<program
+><!-- test:name description='bloc local sans liaison' 
+--><block
+><bindings
+></bindings
+><body
+><integer value='58'
+/></body
+></block
+></program
+>

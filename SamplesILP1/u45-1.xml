@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id: u45-1.scm 405 2006-09-13 17:21:53Z queinnec $
+(comment "invocation primitive print (chaine)")
+(print "Ceci est une chaine")
+
+;;; end of u45-1.scm
+
+ -->
+<program
+><!-- test:name description='invocation primitive print (chaine)' 
+--><invocation
+><function
+><variable name='print'
+/></function
+><arguments
+><string
+>Ceci est une chaine</string
+></arguments
+></invocation
+></program
+>

@@ -1,0 +1,9 @@
+let x = 1 in
+(
+  (
+    try x = 2
+    finally print(x)
+  );
+  print(x);
+  x == 2
+)

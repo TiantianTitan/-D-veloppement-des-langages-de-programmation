@@ -1,0 +1,2 @@
+class Test { var x; }
+type_of( new Test(x) )

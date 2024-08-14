@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id$
+(comment "lambda closing one variable and applied out of scope")
+((let ((x 2))
+   (lambda (y) (+ x y)) )
+ 7500 )
+
+;;; end of u7502-5.scm
+
+ -->
+<program
+><!-- test:name description='lambda closing one variable and applied out of scope' 
+--><invocation
+><function
+><block
+><bindings
+><binding
+><variable name='x'
+/><initialisation
+><integer value='2'
+/></initialisation
+></binding
+></bindings
+><body
+><lambda
+><variables
+><variable name='y'
+/></variables
+><body
+><binaryOperation operator='+'
+><leftOperand
+><variable name='x'
+/></leftOperand
+><rightOperand
+><variable name='y'
+/></rightOperand
+></binaryOperation
+></body
+></lambda
+></body
+></block
+></function
+><arguments
+><integer value='7500'
+/></arguments
+></invocation
+></program
+>

@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id: u65-3.scm 405 2006-09-13 17:21:53Z queinnec $
+(comment "Le catcher recupere bien l'exception et le finally tourne")
+(let ((x 1))
+  (try-catch-finally
+    (begin 
+      (throw 6)
+      (set! x 4) )
+    (lambda (exc)
+      (set! x exc) )
+    (set! x (+ 1 x)) )
+  (print x)
+  (= x 7) )
+
+;;; end of u65-3.scm
+
+ -->
+<program
+><!-- test:name description='Le catcher recupere bien l'exception et le finally tourne' 
+--><block
+><bindings
+><binding
+><variable name='x'
+/><initialisation
+><integer value='1'
+/></initialisation
+></binding
+></bindings
+><body
+><try
+><body
+><sequence
+><invocation
+><function
+><variable name='throw'
+/></function
+><arguments
+><integer value='6'
+/></arguments
+></invocation
+><assignment name='x'
+><value
+><integer value='4'
+/></value
+></assignment
+></sequence
+></body
+><catch exception='exc'
+><assignment name='x'
+><value
+><variable name='exc'
+/></value
+></assignment
+></catch
+><finally
+><assignment name='x'
+><value
+><binaryOperation operator='+'
+><leftOperand
+><integer value='1'
+/></leftOperand
+><rightOperand
+><variable name='x'
+/></rightOperand
+></binaryOperation
+></value
+></assignment
+></finally
+></try
+><invocation
+><function
+><variable name='print'
+/></function
+><arguments
+><variable name='x'
+/></arguments
+></invocation
+><binaryOperation operator='=='
+><leftOperand
+><variable name='x'
+/></leftOperand
+><rightOperand
+><integer value='7'
+/></rightOperand
+></binaryOperation
+></body
+></block
+></program
+>

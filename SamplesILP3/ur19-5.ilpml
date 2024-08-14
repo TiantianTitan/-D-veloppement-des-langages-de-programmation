@@ -1,0 +1,11 @@
+(
+  function quadruple(n)
+  double(double(n))
+
+  and function double(x)
+  (2 * x)
+
+  in
+  quadruple
+)
+(4) + 3

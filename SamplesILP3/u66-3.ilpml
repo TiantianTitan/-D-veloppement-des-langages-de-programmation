@@ -1,0 +1,16 @@
+let x = 0 in
+(
+  (
+    try
+    (
+      x = x + 1; 
+      (
+        try (x = x + 10; throw(x))
+        finally (print(x); x = 2 * x)
+      )
+    )
+    finally (print(x); x = 3 * x)
+  );
+  x == 66
+)
+

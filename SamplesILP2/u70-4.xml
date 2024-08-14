@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id: u70-4.scm 405 2006-09-13 17:21:53Z queinnec $
+(comment "alternative en expression")
+(if (if (= 1 1) #t #f)
+    3 
+    4 )
+
+;;; end of u70-4.scm
+
+ -->
+<program
+><!-- test:name description='alternative en expression' 
+--><alternative
+><condition
+><alternative
+><condition
+><binaryOperation operator='=='
+><leftOperand
+><integer value='1'
+/></leftOperand
+><rightOperand
+><integer value='1'
+/></rightOperand
+></binaryOperation
+></condition
+><consequence
+><boolean value='true'
+/></consequence
+><alternant
+><boolean value='false'
+/></alternant
+></alternative
+></condition
+><consequence
+><integer value='3'
+/></consequence
+><alternant
+><integer value='4'
+/></alternant
+></alternative
+></program
+>

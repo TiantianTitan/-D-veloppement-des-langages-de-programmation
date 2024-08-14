@@ -1,0 +1,10 @@
+let x = 1 in
+(
+  (
+    try (3 + true; x = 4)
+    catch (exc) x = 5 + x
+  );
+  print(x);
+  x == 6
+)  
+

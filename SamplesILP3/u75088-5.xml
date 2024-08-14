@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id$
+(comment "mutable closed variable")
+(define (mkcounter start)
+  (lambda ()
+    (set! start (+ start 1))
+    start ) )
+(set! g (mkcounter 0))
+(let ((a (g)))
+  (let ((b (g)))
+    (= b (+ a 1)) ) )
+
+;;; end of u75088-5.scm
+
+ -->
+<program
+><!-- test:name description='mutable closed variable' 
+--><functionDefinition name='mkcounter'
+><variables
+><variable name='start'
+/></variables
+><body
+><lambda
+><variables
+></variables
+><body
+><assignment name='start'
+><value
+><binaryOperation operator='+'
+><leftOperand
+><variable name='start'
+/></leftOperand
+><rightOperand
+><integer value='1'
+/></rightOperand
+></binaryOperation
+></value
+></assignment
+><variable name='start'
+/></body
+></lambda
+></body
+></functionDefinition
+><assignment name='g'
+><value
+><invocation
+><function
+><variable name='mkcounter'
+/></function
+><arguments
+><integer value='0'
+/></arguments
+></invocation
+></value
+></assignment
+><block
+><bindings
+><binding
+><variable name='a'
+/><initialisation
+><invocation
+><function
+><variable name='g'
+/></function
+><arguments
+></arguments
+></invocation
+></initialisation
+></binding
+></bindings
+><body
+><block
+><bindings
+><binding
+><variable name='b'
+/><initialisation
+><invocation
+><function
+><variable name='g'
+/></function
+><arguments
+></arguments
+></invocation
+></initialisation
+></binding
+></bindings
+><body
+><binaryOperation operator='=='
+><leftOperand
+><variable name='b'
+/></leftOperand
+><rightOperand
+><binaryOperation operator='+'
+><leftOperand
+><variable name='a'
+/></leftOperand
+><rightOperand
+><integer value='1'
+/></rightOperand
+></binaryOperation
+></rightOperand
+></binaryOperation
+></body
+></block
+></body
+></block
+></program
+>

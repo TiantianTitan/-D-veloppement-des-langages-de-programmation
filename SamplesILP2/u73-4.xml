@@ -1,0 +1,171 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id: u73-4.scm 405 2006-09-13 17:21:53Z queinnec $
+(comment "detection de fonction recursive et integration grossissante")
+(define (f1 x)
+  (* 2 x) )
+(define (f2 x y)
+  (f1 (f1 x)) )
+(define (f3 x)
+  (f2 (f1 x) (f2 x x)) )
+
+(define (fr1 x)
+  (fr2 x) )
+(define (fr2 x)
+  (fr3 (fr3 x)) )
+(define (fr3 x)
+  (f3 (fr1 (fr3 x))) )
+
+(f3 73)
+
+;;; end of u73-4.scm
+
+ -->
+<program
+><!-- test:name description='detection de fonction recursive et integration grossissante' 
+--><functionDefinition name='f1'
+><variables
+><variable name='x'
+/></variables
+><body
+><binaryOperation operator='*'
+><leftOperand
+><integer value='2'
+/></leftOperand
+><rightOperand
+><variable name='x'
+/></rightOperand
+></binaryOperation
+></body
+></functionDefinition
+><functionDefinition name='f2'
+><variables
+><variable name='x'
+/><variable name='y'
+/></variables
+><body
+><invocation
+><function
+><variable name='f1'
+/></function
+><arguments
+><invocation
+><function
+><variable name='f1'
+/></function
+><arguments
+><variable name='x'
+/></arguments
+></invocation
+></arguments
+></invocation
+></body
+></functionDefinition
+><functionDefinition name='f3'
+><variables
+><variable name='x'
+/></variables
+><body
+><invocation
+><function
+><variable name='f2'
+/></function
+><arguments
+><invocation
+><function
+><variable name='f1'
+/></function
+><arguments
+><variable name='x'
+/></arguments
+></invocation
+><invocation
+><function
+><variable name='f2'
+/></function
+><arguments
+><variable name='x'
+/><variable name='x'
+/></arguments
+></invocation
+></arguments
+></invocation
+></body
+></functionDefinition
+><functionDefinition name='fr1'
+><variables
+><variable name='x'
+/></variables
+><body
+><invocation
+><function
+><variable name='fr2'
+/></function
+><arguments
+><variable name='x'
+/></arguments
+></invocation
+></body
+></functionDefinition
+><functionDefinition name='fr2'
+><variables
+><variable name='x'
+/></variables
+><body
+><invocation
+><function
+><variable name='fr3'
+/></function
+><arguments
+><invocation
+><function
+><variable name='fr3'
+/></function
+><arguments
+><variable name='x'
+/></arguments
+></invocation
+></arguments
+></invocation
+></body
+></functionDefinition
+><functionDefinition name='fr3'
+><variables
+><variable name='x'
+/></variables
+><body
+><invocation
+><function
+><variable name='f3'
+/></function
+><arguments
+><invocation
+><function
+><variable name='fr1'
+/></function
+><arguments
+><invocation
+><function
+><variable name='fr3'
+/></function
+><arguments
+><variable name='x'
+/></arguments
+></invocation
+></arguments
+></invocation
+></arguments
+></invocation
+></body
+></functionDefinition
+><invocation
+><function
+><variable name='f3'
+/></function
+><arguments
+><integer value='73'
+/></arguments
+></invocation
+></program
+>

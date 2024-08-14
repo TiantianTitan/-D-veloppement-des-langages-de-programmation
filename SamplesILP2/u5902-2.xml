@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id: u5902-2.scm 491 2006-10-09 10:33:08Z queinnec $
+(comment "affectation et invocation en position d'arguments (sans conflit)")
+
+;;; Cette pseudo-sequence repose sur le fait que le compilateur et
+;;; l'evaluateur evaluent les arguments de la gauche vers la droite.
+(define (pseudosequence one two)
+  two )
+
+(define (foo x)
+  (* 2 x) )
+
+(let ((y 12))
+  (foo (pseudosequence (set! y (foo y))
+                       y ) ) )
+
+;;; end of u5902.scm
+
+ -->
+<program
+><!-- test:name description='affectation et invocation en position d'arguments (sans conflit)' 
+--><functionDefinition name='pseudosequence'
+><variables
+><variable name='one'
+/><variable name='two'
+/></variables
+><body
+><variable name='two'
+/></body
+></functionDefinition
+><functionDefinition name='foo'
+><variables
+><variable name='x'
+/></variables
+><body
+><binaryOperation operator='*'
+><leftOperand
+><integer value='2'
+/></leftOperand
+><rightOperand
+><variable name='x'
+/></rightOperand
+></binaryOperation
+></body
+></functionDefinition
+><block
+><bindings
+><binding
+><variable name='y'
+/><initialisation
+><integer value='12'
+/></initialisation
+></binding
+></bindings
+><body
+><invocation
+><function
+><variable name='foo'
+/></function
+><arguments
+><invocation
+><function
+><variable name='pseudosequence'
+/></function
+><arguments
+><assignment name='y'
+><value
+><invocation
+><function
+><variable name='foo'
+/></function
+><arguments
+><variable name='y'
+/></arguments
+></invocation
+></value
+></assignment
+><variable name='y'
+/></arguments
+></invocation
+></arguments
+></invocation
+></body
+></block
+></program
+>

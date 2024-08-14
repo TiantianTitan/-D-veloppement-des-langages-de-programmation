@@ -1,0 +1,266 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id: u847-6.scm 620 2007-01-07 14:24:50Z queinnec $
+(comment "super(arg1 arg2) double avec double hierarchie avec renommage")
+(expected-result 847)
+
+(defclass Point Object
+  (x)
+  (define (m1 tt uu)
+    (* tt (oget (self) "x"))) )
+
+(defclass Point2Da Point
+  (y)
+  (define (m1 ttt uuu)
+    (+ (* uuu (oget (self) "y"))
+       (super) ) ) )
+
+(defclass Point3Da Point2Da
+  (z)
+  (define (m1 tt uu)
+    (+ (oget (self) "z")
+       (super) ) ) ) 
+
+(defclass Point2Db Point
+  (yy)
+  (define (m1 t u)
+    (* (* u (oget (self) "yy"))
+       (super) ) ) )
+
+(defclass Point3Db Point2Db
+  (zz)
+  (define (m1 tt uu)
+    (* (oget (self) "zz")
+       (super) ) ) ) 
+
+(let ((pc4 (new Point3Da -2 100 23))
+      (pc2 (new Point3Db 20 1 5)) )
+  (try-catch-finally
+   (+ (send "m1" pc4 3 4)    ; 417 = 17 + 4*100 + 3*-2
+      (+ (send "m1" pc2 2 3) ; 600 = 5*3*1*2*20
+         -170 ) )
+   (lambda (e) #f)
+   #f ) )
+
+;;; end of u847-6.scm
+
+ -->
+<program
+><!-- test:name description='super(arg1 arg2) double avec double hierarchie avec renommage' 
+--><!-- test:result value='847' 
+--><classDefinition name='Point' parent='Object'
+><fields
+><field name='x'
+/></fields
+><methods
+><method name='m1'
+><variables
+><variable name='tt'
+/><variable name='uu'
+/></variables
+><body
+><binaryOperation operator='*'
+><leftOperand
+><variable name='tt'
+/></leftOperand
+><rightOperand
+><fieldRead field='x'
+><target
+><self
+/></target
+></fieldRead
+></rightOperand
+></binaryOperation
+></body
+></method
+></methods
+></classDefinition
+><classDefinition name='Point2Da' parent='Point'
+><fields
+><field name='y'
+/></fields
+><methods
+><method name='m1'
+><variables
+><variable name='ttt'
+/><variable name='uuu'
+/></variables
+><body
+><binaryOperation operator='+'
+><leftOperand
+><binaryOperation operator='*'
+><leftOperand
+><variable name='uuu'
+/></leftOperand
+><rightOperand
+><fieldRead field='y'
+><target
+><self
+/></target
+></fieldRead
+></rightOperand
+></binaryOperation
+></leftOperand
+><rightOperand
+><super
+/></rightOperand
+></binaryOperation
+></body
+></method
+></methods
+></classDefinition
+><classDefinition name='Point3Da' parent='Point2Da'
+><fields
+><field name='z'
+/></fields
+><methods
+><method name='m1'
+><variables
+><variable name='tt'
+/><variable name='uu'
+/></variables
+><body
+><binaryOperation operator='+'
+><leftOperand
+><fieldRead field='z'
+><target
+><self
+/></target
+></fieldRead
+></leftOperand
+><rightOperand
+><super
+/></rightOperand
+></binaryOperation
+></body
+></method
+></methods
+></classDefinition
+><classDefinition name='Point2Db' parent='Point'
+><fields
+><field name='yy'
+/></fields
+><methods
+><method name='m1'
+><variables
+><variable name='t'
+/><variable name='u'
+/></variables
+><body
+><binaryOperation operator='*'
+><leftOperand
+><binaryOperation operator='*'
+><leftOperand
+><variable name='u'
+/></leftOperand
+><rightOperand
+><fieldRead field='yy'
+><target
+><self
+/></target
+></fieldRead
+></rightOperand
+></binaryOperation
+></leftOperand
+><rightOperand
+><super
+/></rightOperand
+></binaryOperation
+></body
+></method
+></methods
+></classDefinition
+><classDefinition name='Point3Db' parent='Point2Db'
+><fields
+><field name='zz'
+/></fields
+><methods
+><method name='m1'
+><variables
+><variable name='tt'
+/><variable name='uu'
+/></variables
+><body
+><binaryOperation operator='*'
+><leftOperand
+><fieldRead field='zz'
+><target
+><self
+/></target
+></fieldRead
+></leftOperand
+><rightOperand
+><super
+/></rightOperand
+></binaryOperation
+></body
+></method
+></methods
+></classDefinition
+><block
+><bindings
+><binding
+><variable name='pc4'
+/><initialisation
+><instantiation class='Point3Da'
+><integer value='-2'
+/><integer value='100'
+/><integer value='23'
+/></instantiation
+></initialisation
+></binding
+><binding
+><variable name='pc2'
+/><initialisation
+><instantiation class='Point3Db'
+><integer value='20'
+/><integer value='1'
+/><integer value='5'
+/></instantiation
+></initialisation
+></binding
+></bindings
+><body
+><try
+><body
+><binaryOperation operator='+'
+><leftOperand
+><send message='m1'
+><receiver
+><variable name='pc4'
+/></receiver
+><arguments
+><integer value='3'
+/><integer value='4'
+/></arguments
+></send
+></leftOperand
+><rightOperand
+><binaryOperation operator='+'
+><leftOperand
+><send message='m1'
+><receiver
+><variable name='pc2'
+/></receiver
+><arguments
+><integer value='2'
+/><integer value='3'
+/></arguments
+></send
+></leftOperand
+><rightOperand
+><integer value='-170'
+/></rightOperand
+></binaryOperation
+></rightOperand
+></binaryOperation
+></body
+><catch exception='e'
+><boolean value='false'
+/></catch
+></try
+></body
+></block
+></program
+>

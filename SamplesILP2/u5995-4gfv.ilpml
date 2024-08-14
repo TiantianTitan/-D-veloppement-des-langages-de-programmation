@@ -1,0 +1,7 @@
+function deuxfois(x)
+2 * x;
+
+let f = deuxfois in g = f;
+g(3000) - 5
+
+

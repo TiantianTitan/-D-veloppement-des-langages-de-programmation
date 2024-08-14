@@ -1,0 +1,93 @@
+# -*- coding: utf-8 -*-
+# ******************************************************************
+# ILP9 - Implantation d'un langage de programmation.
+# by Christian.Queinnec@paracamplus.com
+# See http://mooc.paracamplus.com/ilp9
+# GPL version 3
+# ****************************************************************** 
+start = program
+expression =
+  alternative
+  | sequence
+  | block
+  | constant
+  | invocation
+  | operation
+  | variable
+alternative =
+  element alternative {
+    element condition { expression },
+    element consequence { expression+ },
+    element alternant { expression+ }?
+  }
+sequence = element sequence { expression+ }
+block =
+  element block {
+    element bindings {
+      element binding {
+        variable,
+        element initialisation { expression }
+      }*
+    },
+    element body { expression+ }
+  }
+invocation =
+  element invocation {
+    element function { expression },
+    element arguments { expression* }
+  }
+variable =
+  element variable {
+    attribute name {
+      xsd:Name - (xsd:Name { pattern = "(ilp|ILP)" })
+    },
+    empty
+  }
+operation = unaryOperation | binaryOperation
+unaryOperation =
+  element unaryOperation {
+    attribute operator { "-" | "!" },
+    element operand { expression }
+  }
+binaryOperation =
+  element binaryOperation {
+    element leftOperand { expression },
+    attribute operator {
+      ("+"
+       | "-"
+       | "*"
+       | "/"
+       | "%"
+       | # arithmetic
+         "|"
+       | "&"
+       | "^"
+       | # booleans
+         "<"
+       | "<="
+       | "=="
+       | ">="
+       | ">"
+       | "<>"
+       | "!=")
+      # comparison
+      
+    },
+    element rightOperand { expression }
+  }
+constant =
+  element integer {
+    attribute value { xsd:integer },
+    empty
+  }
+  | element float {
+      attribute value { xsd:float },
+      empty
+    }
+  | element string { text }
+  | element boolean {
+      attribute value { "true" | "false" },
+      empty
+    }
+program = element program { expression+ }
+# end of grammar1.rnc

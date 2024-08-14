@@ -1,0 +1,6 @@
+function mkcounter(start)
+(lambda () (start = start + 1; start));
+
+let c1 = mkcounter(0)
+and c2 = mkcounter(10) in
+(c1(); c2(); c2(); c1(); c2(); 11 + c1() == c2())

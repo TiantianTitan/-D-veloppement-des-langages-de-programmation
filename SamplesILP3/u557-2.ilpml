@@ -1,0 +1,7 @@
+function bar(y)
+(3 + foo(y));
+
+function foo(x)
+(2 * x);
+
+bar(557)

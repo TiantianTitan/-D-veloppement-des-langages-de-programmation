@@ -1,0 +1,3 @@
+let i = 22 in
+let f = 6.3 in
+f + i

@@ -1,0 +1,7 @@
+class Point extends Object
+{
+    var x;
+    var y;
+}
+
+807

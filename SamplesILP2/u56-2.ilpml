@@ -1,0 +1,22 @@
+function odd(n)
+(
+  if n == 0
+  then false
+  else 
+    if n == 1
+    then true
+    else even (n - 1)
+);
+
+function even(n)
+(
+  if n == 0
+  then true
+  else 
+    if n == 1
+    then false
+    else odd (n - 1)
+);
+
+! odd(56)
+

@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id$
+((let ((x 500))
+   ((let ((mkf (lambda (y z)
+                 (lambda (t)
+                   (+ x (+ y (+ z t))) ) )))
+      mkf )
+    7000 5 ) )
+ 1 )
+
+;;; end of u7506-5.scm
+
+ -->
+<program
+><invocation
+><function
+><block
+><bindings
+><binding
+><variable name='x'
+/><initialisation
+><integer value='500'
+/></initialisation
+></binding
+></bindings
+><body
+><invocation
+><function
+><block
+><bindings
+><binding
+><variable name='mkf'
+/><initialisation
+><lambda
+><variables
+><variable name='y'
+/><variable name='z'
+/></variables
+><body
+><lambda
+><variables
+><variable name='t'
+/></variables
+><body
+><binaryOperation operator='+'
+><leftOperand
+><variable name='x'
+/></leftOperand
+><rightOperand
+><binaryOperation operator='+'
+><leftOperand
+><variable name='y'
+/></leftOperand
+><rightOperand
+><binaryOperation operator='+'
+><leftOperand
+><variable name='z'
+/></leftOperand
+><rightOperand
+><variable name='t'
+/></rightOperand
+></binaryOperation
+></rightOperand
+></binaryOperation
+></rightOperand
+></binaryOperation
+></body
+></lambda
+></body
+></lambda
+></initialisation
+></binding
+></bindings
+><body
+><variable name='mkf'
+/></body
+></block
+></function
+><arguments
+><integer value='7000'
+/><integer value='5'
+/></arguments
+></invocation
+></body
+></block
+></function
+><arguments
+><integer value='1'
+/></arguments
+></invocation
+></program
+>

@@ -1,0 +1,8 @@
+class className {
+    var variable1;
+    var variable2;
+}
+
+let name = new className("string1", "string2") in (
+    name["variable3"] = "string3";
+)

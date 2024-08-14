@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id: u836-6.scm 405 2006-09-13 17:21:53Z queinnec $
+(comment "methodes en parallele: interdit en compilation!")
+(expected-result 836)
+
+(defclass Point Object
+  (x y)
+  (define (x) 
+    (oget (self) "x") ) )
+
+(defclass PointColore Point
+  (color)
+  (define (color1)
+    (oget (self) "color") ) )
+
+(defclass PointLarge Point
+  (taille)
+  (define (color2)
+    (oget (self) "taille") ) )
+
+(let ((pc (new PointColore 11 22 "red"))
+      (pl (new PointLarge  33 44 835)) )
+  (try-catch-finally
+   (send "color2" pc)
+   (lambda (e) #f)
+   #f )
+  836 )
+
+;;; end of u836-6.scm
+
+ -->
+<program
+><!-- test:name description='methodes en parallele: interdit en compilation!' 
+--><!-- test:result value='836' 
+--><classDefinition name='Point' parent='Object'
+><fields
+><field name='x'
+/><field name='y'
+/></fields
+><methods
+><method name='x'
+><variables
+></variables
+><body
+><fieldRead field='x'
+><target
+><self
+/></target
+></fieldRead
+></body
+></method
+></methods
+></classDefinition
+><classDefinition name='PointColore' parent='Point'
+><fields
+><field name='color'
+/></fields
+><methods
+><method name='color1'
+><variables
+></variables
+><body
+><fieldRead field='color'
+><target
+><self
+/></target
+></fieldRead
+></body
+></method
+></methods
+></classDefinition
+><classDefinition name='PointLarge' parent='Point'
+><fields
+><field name='taille'
+/></fields
+><methods
+><method name='color2'
+><variables
+></variables
+><body
+><fieldRead field='taille'
+><target
+><self
+/></target
+></fieldRead
+></body
+></method
+></methods
+></classDefinition
+><block
+><bindings
+><binding
+><variable name='pc'
+/><initialisation
+><instantiation class='PointColore'
+><integer value='11'
+/><integer value='22'
+/><string
+>red</string
+></instantiation
+></initialisation
+></binding
+><binding
+><variable name='pl'
+/><initialisation
+><instantiation class='PointLarge'
+><integer value='33'
+/><integer value='44'
+/><integer value='835'
+/></instantiation
+></initialisation
+></binding
+></bindings
+><body
+><try
+><body
+><send message='color2'
+><receiver
+><variable name='pc'
+/></receiver
+><arguments
+></arguments
+></send
+></body
+><catch exception='e'
+><boolean value='false'
+/></catch
+></try
+><integer value='836'
+/></body
+></block
+></program
+>

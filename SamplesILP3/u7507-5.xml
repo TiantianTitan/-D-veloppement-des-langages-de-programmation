@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id$
+(comment "Don't close global variables")
+(define (mkf y z) 
+  (lambda (t) (+ g (+ y (+ z t)))) )
+(set! g 500)
+((mkf 7000 6)
+ 1 )
+
+;;; end of u7507-5.scm
+
+ -->
+<program
+><!-- test:name description='Don't close global variables' 
+--><functionDefinition name='mkf'
+><variables
+><variable name='y'
+/><variable name='z'
+/></variables
+><body
+><lambda
+><variables
+><variable name='t'
+/></variables
+><body
+><binaryOperation operator='+'
+><leftOperand
+><variable name='g'
+/></leftOperand
+><rightOperand
+><binaryOperation operator='+'
+><leftOperand
+><variable name='y'
+/></leftOperand
+><rightOperand
+><binaryOperation operator='+'
+><leftOperand
+><variable name='z'
+/></leftOperand
+><rightOperand
+><variable name='t'
+/></rightOperand
+></binaryOperation
+></rightOperand
+></binaryOperation
+></rightOperand
+></binaryOperation
+></body
+></lambda
+></body
+></functionDefinition
+><assignment name='g'
+><value
+><integer value='500'
+/></value
+></assignment
+><invocation
+><function
+><invocation
+><function
+><variable name='mkf'
+/></function
+><arguments
+><integer value='7000'
+/><integer value='6'
+/></arguments
+></invocation
+></function
+><arguments
+><integer value='1'
+/></arguments
+></invocation
+></program
+>

@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id: u14-1.scm 405 2006-09-13 17:21:53Z queinnec $
+(comment "operateur binaire %" 3)
+(modulo 33 5)
+
+;;; end of u14-1.scm
+
+ -->
+<program
+><!-- test:name description='operateur binaire %' 
+--><binaryOperation operator='%'
+><leftOperand
+><integer value='33'
+/></leftOperand
+><rightOperand
+><integer value='5'
+/></rightOperand
+></binaryOperation
+></program
+>

@@ -1,0 +1,9 @@
+class Point extends Object
+{
+    var x_3ax;
+    var y;
+
+    method print () self.x_3ax;
+}
+
+(new Point(8450, 22)).print()

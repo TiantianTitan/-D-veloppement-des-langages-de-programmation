@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id: u808-6.scm 405 2006-09-13 17:21:53Z queinnec $
+(comment "Creation d'une classe avec 2 champs, sans methode + allocation")
+(expected-result 808)
+
+(defclass Point Object 
+  (x y) )
+(new Point 11 22)
+808
+
+;;; end of 808-6.scm
+
+ -->
+<program
+><!-- test:name description='Creation d'une classe avec 2 champs, sans methode + allocation' 
+--><!-- test:result value='808' 
+--><classDefinition name='Point' parent='Object'
+><fields
+><field name='x'
+/><field name='y'
+/></fields
+><methods
+></methods
+></classDefinition
+><instantiation class='Point'
+><integer value='11'
+/><integer value='22'
+/></instantiation
+><integer value='808'
+/></program
+>

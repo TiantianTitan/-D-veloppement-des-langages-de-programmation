@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id: u59015-2.scm 620 2007-01-07 14:24:50Z queinnec $
+(comment "Affectation en position d'argument (et conflit noms de variables)")
+
+(define (foo x)
+  (* 2 x) )
+
+;;; Cette pseudo-sequence repose sur le fait que le compilateur et
+;;; l'evaluateur evaluent les arguments de la gauche vers la droite.
+(define (pseudosequence one two)
+  two )
+
+(let ((x 11)) ; Ici on choisit le nom x pour provoquer un conflit
+  (foo (pseudosequence (set! x (+ x 1))
+                        x )) )
+
+;;; end of u59015-2.scm
+
+ -->
+<program
+><!-- test:name description='Affectation en position d'argument (et conflit noms de variables)' 
+--><functionDefinition name='foo'
+><variables
+><variable name='x'
+/></variables
+><body
+><binaryOperation operator='*'
+><leftOperand
+><integer value='2'
+/></leftOperand
+><rightOperand
+><variable name='x'
+/></rightOperand
+></binaryOperation
+></body
+></functionDefinition
+><functionDefinition name='pseudosequence'
+><variables
+><variable name='one'
+/><variable name='two'
+/></variables
+><body
+><variable name='two'
+/></body
+></functionDefinition
+><block
+><bindings
+><binding
+><variable name='x'
+/><initialisation
+><integer value='11'
+/></initialisation
+></binding
+></bindings
+><body
+><invocation
+><function
+><variable name='foo'
+/></function
+><arguments
+><invocation
+><function
+><variable name='pseudosequence'
+/></function
+><arguments
+><assignment name='x'
+><value
+><binaryOperation operator='+'
+><leftOperand
+><variable name='x'
+/></leftOperand
+><rightOperand
+><integer value='1'
+/></rightOperand
+></binaryOperation
+></value
+></assignment
+><variable name='x'
+/></arguments
+></invocation
+></arguments
+></invocation
+></body
+></block
+></program
+>

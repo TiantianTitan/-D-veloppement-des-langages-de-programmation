@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id: u50-2.scm 405 2006-09-13 17:21:53Z queinnec $
+(comment "affectation")
+(let ((x 50))
+  (set! x 500)
+  x )
+
+;;; end of u50-2.scm
+
+ -->
+<program
+><!-- test:name description='affectation' 
+--><block
+><bindings
+><binding
+><variable name='x'
+/><initialisation
+><integer value='50'
+/></initialisation
+></binding
+></bindings
+><body
+><assignment name='x'
+><value
+><integer value='500'
+/></value
+></assignment
+><variable name='x'
+/></body
+></block
+></program
+>

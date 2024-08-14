@@ -1,0 +1,9 @@
+class Po_3aint extends Object
+{
+    var x;
+    var y;
+
+    method print () 8451;
+}
+
+(new Po_3aint(11, 22)).print()

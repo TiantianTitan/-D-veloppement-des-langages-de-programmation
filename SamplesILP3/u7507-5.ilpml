@@ -1,0 +1,5 @@
+function mkf(y, z)
+(lambda (t) g + y + z + t);
+
+g = 500;
+mkf(7000, 6) (1)

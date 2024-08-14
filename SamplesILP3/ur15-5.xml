@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id$
+(comment "deux definitions locales non mutuellement recursives")
+(letrec ()
+  (define (fact n)
+    (if (> n 1) 
+        (* n (fact (- n 1)))
+        1 ) )
+  (define (double x) (* 2 x))
+  (+ (fact 3) 9) )
+
+;;; end of ur15-5.scm
+
+ -->
+<program
+><!-- test:name description='deux definitions locales non mutuellement recursives' 
+--><codefinitions
+><functions
+><functionDefinition name='fact'
+><variables
+><variable name='n'
+/></variables
+><body
+><alternative
+><condition
+><binaryOperation operator='&gt;'
+><leftOperand
+><variable name='n'
+/></leftOperand
+><rightOperand
+><integer value='1'
+/></rightOperand
+></binaryOperation
+></condition
+><consequence
+><binaryOperation operator='*'
+><leftOperand
+><variable name='n'
+/></leftOperand
+><rightOperand
+><invocation
+><function
+><variable name='fact'
+/></function
+><arguments
+><binaryOperation operator='-'
+><leftOperand
+><variable name='n'
+/></leftOperand
+><rightOperand
+><integer value='1'
+/></rightOperand
+></binaryOperation
+></arguments
+></invocation
+></rightOperand
+></binaryOperation
+></consequence
+><alternant
+><integer value='1'
+/></alternant
+></alternative
+></body
+></functionDefinition
+><functionDefinition name='double'
+><variables
+><variable name='x'
+/></variables
+><body
+><binaryOperation operator='*'
+><leftOperand
+><integer value='2'
+/></leftOperand
+><rightOperand
+><variable name='x'
+/></rightOperand
+></binaryOperation
+></body
+></functionDefinition
+></functions
+><body
+><binaryOperation operator='+'
+><leftOperand
+><invocation
+><function
+><variable name='fact'
+/></function
+><arguments
+><integer value='3'
+/></arguments
+></invocation
+></leftOperand
+><rightOperand
+><integer value='9'
+/></rightOperand
+></binaryOperation
+></body
+></codefinitions
+></program
+>

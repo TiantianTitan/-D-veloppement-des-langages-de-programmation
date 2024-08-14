@@ -1,0 +1,7 @@
+function deuxfois(x)
+2 * x;
+function twice(f, x)
+f(f(x));
+
+twice(deuxfois, 1500) - 6
+

@@ -1,0 +1,150 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id: u56-2.scm 405 2006-09-13 17:21:53Z queinnec $
+(comment "deux fonctions mutuellement recursives")
+(define (odd n)
+  (if (= n 0) 
+      #f
+      (if (= n 1)
+          #t 
+          (even (- n 1)) ) ) )
+(define (even n)
+  (if (= n 0)
+      #t 
+      (if (= n 1)
+          #f
+          (odd (- n 1)) ) ) )
+(not (odd 56))
+
+;;; end of u56-2.scm
+
+ -->
+<program
+><!-- test:name description='deux fonctions mutuellement recursives' 
+--><functionDefinition name='odd'
+><variables
+><variable name='n'
+/></variables
+><body
+><alternative
+><condition
+><binaryOperation operator='=='
+><leftOperand
+><variable name='n'
+/></leftOperand
+><rightOperand
+><integer value='0'
+/></rightOperand
+></binaryOperation
+></condition
+><consequence
+><boolean value='false'
+/></consequence
+><alternant
+><alternative
+><condition
+><binaryOperation operator='=='
+><leftOperand
+><variable name='n'
+/></leftOperand
+><rightOperand
+><integer value='1'
+/></rightOperand
+></binaryOperation
+></condition
+><consequence
+><boolean value='true'
+/></consequence
+><alternant
+><invocation
+><function
+><variable name='even'
+/></function
+><arguments
+><binaryOperation operator='-'
+><leftOperand
+><variable name='n'
+/></leftOperand
+><rightOperand
+><integer value='1'
+/></rightOperand
+></binaryOperation
+></arguments
+></invocation
+></alternant
+></alternative
+></alternant
+></alternative
+></body
+></functionDefinition
+><functionDefinition name='even'
+><variables
+><variable name='n'
+/></variables
+><body
+><alternative
+><condition
+><binaryOperation operator='=='
+><leftOperand
+><variable name='n'
+/></leftOperand
+><rightOperand
+><integer value='0'
+/></rightOperand
+></binaryOperation
+></condition
+><consequence
+><boolean value='true'
+/></consequence
+><alternant
+><alternative
+><condition
+><binaryOperation operator='=='
+><leftOperand
+><variable name='n'
+/></leftOperand
+><rightOperand
+><integer value='1'
+/></rightOperand
+></binaryOperation
+></condition
+><consequence
+><boolean value='false'
+/></consequence
+><alternant
+><invocation
+><function
+><variable name='odd'
+/></function
+><arguments
+><binaryOperation operator='-'
+><leftOperand
+><variable name='n'
+/></leftOperand
+><rightOperand
+><integer value='1'
+/></rightOperand
+></binaryOperation
+></arguments
+></invocation
+></alternant
+></alternative
+></alternant
+></alternative
+></body
+></functionDefinition
+><unaryOperation operator='!'
+><operand
+><invocation
+><function
+><variable name='odd'
+/></function
+><arguments
+><integer value='56'
+/></arguments
+></invocation
+></operand
+></unaryOperation
+></program
+>

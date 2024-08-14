@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id: u810-6.scm 405 2006-09-13 17:21:53Z queinnec $
+(comment "Point + ecriture/lecture champ")
+(expected-result 810)
+
+(defclass Point Object
+  (x y) )
+(let ((point (new Point 11 22)))
+  (oset! point "x" 810)
+  (oget point "x") )
+
+;;; end of u810-6.scm
+
+ -->
+<program
+><!-- test:name description='Point + ecriture/lecture champ' 
+--><!-- test:result value='810' 
+--><classDefinition name='Point' parent='Object'
+><fields
+><field name='x'
+/><field name='y'
+/></fields
+><methods
+></methods
+></classDefinition
+><block
+><bindings
+><binding
+><variable name='point'
+/><initialisation
+><instantiation class='Point'
+><integer value='11'
+/><integer value='22'
+/></instantiation
+></initialisation
+></binding
+></bindings
+><body
+><fieldWrite field='x'
+><target
+><variable name='point'
+/></target
+><value
+><integer value='810'
+/></value
+></fieldWrite
+><fieldRead field='x'
+><target
+><variable name='point'
+/></target
+></fieldRead
+></body
+></block
+></program
+>

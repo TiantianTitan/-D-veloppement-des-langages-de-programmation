@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id: u818-6.scm 405 2006-09-13 17:21:53Z queinnec $
+(comment "2 methodes s'invoquant avec self")
+(expected-result 15)
+
+(defclass Point Object
+  (x y)
+  (define (m2 u)
+    (+ (send "m1" (self) u u) 1) )
+  (define (m1 z t)
+    (+ (* z (oget (self) "x"))
+       (* t (oget (self) "y")) ) ) )
+
+(let ((point (new Point 3 4)))
+  (send "m2" point 2) )
+
+;;; end of u818-6.scm
+
+ -->
+<program
+><!-- test:name description='2 methodes s'invoquant avec self' 
+--><!-- test:result value='15' 
+--><classDefinition name='Point' parent='Object'
+><fields
+><field name='x'
+/><field name='y'
+/></fields
+><methods
+><method name='m2'
+><variables
+><variable name='u'
+/></variables
+><body
+><binaryOperation operator='+'
+><leftOperand
+><send message='m1'
+><receiver
+><self
+/></receiver
+><arguments
+><variable name='u'
+/><variable name='u'
+/></arguments
+></send
+></leftOperand
+><rightOperand
+><integer value='1'
+/></rightOperand
+></binaryOperation
+></body
+></method
+><method name='m1'
+><variables
+><variable name='z'
+/><variable name='t'
+/></variables
+><body
+><binaryOperation operator='+'
+><leftOperand
+><binaryOperation operator='*'
+><leftOperand
+><variable name='z'
+/></leftOperand
+><rightOperand
+><fieldRead field='x'
+><target
+><self
+/></target
+></fieldRead
+></rightOperand
+></binaryOperation
+></leftOperand
+><rightOperand
+><binaryOperation operator='*'
+><leftOperand
+><variable name='t'
+/></leftOperand
+><rightOperand
+><fieldRead field='y'
+><target
+><self
+/></target
+></fieldRead
+></rightOperand
+></binaryOperation
+></rightOperand
+></binaryOperation
+></body
+></method
+></methods
+></classDefinition
+><block
+><bindings
+><binding
+><variable name='point'
+/><initialisation
+><instantiation class='Point'
+><integer value='3'
+/><integer value='4'
+/></instantiation
+></initialisation
+></binding
+></bindings
+><body
+><send message='m2'
+><receiver
+><variable name='point'
+/></receiver
+><arguments
+><integer value='2'
+/></arguments
+></send
+></body
+></block
+></program
+>

@@ -1,0 +1,2 @@
+function double(x) x + x in
+(print("ok"); 1 + double(6))

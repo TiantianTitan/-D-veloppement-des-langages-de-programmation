@@ -1,0 +1,10 @@
+let x = 1 in
+(
+  (
+    try (throw(6); x = 4)
+    catch (exc) x = exc
+    finally x = 1 + x
+  );
+  print(x);
+  x == 7
+)

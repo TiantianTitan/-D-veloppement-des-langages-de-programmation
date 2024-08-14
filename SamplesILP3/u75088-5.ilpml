@@ -1,0 +1,9 @@
+function mkcounter(start)
+(lambda () (start = start + 1; start));
+
+g = mkcounter(0);
+
+let a = g() in
+let b = g() in
+b == a + 1
+

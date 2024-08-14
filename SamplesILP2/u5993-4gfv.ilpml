@@ -1,0 +1,8 @@
+function deuxfois(x)
+2 * x;
+
+function apply(f, x)
+f(x);
+
+apply(deuxfois, 3000) - 7
+

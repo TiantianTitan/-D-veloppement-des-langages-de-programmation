@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id: u42-1.scm 405 2006-09-13 17:21:53Z queinnec $
+(comment "invocation primitive print (flottant)")
+(print (- 2.5 1))
+
+;;; end of u42-1.scm
+
+ -->
+<program
+><!-- test:name description='invocation primitive print (flottant)' 
+--><invocation
+><function
+><variable name='print'
+/></function
+><arguments
+><binaryOperation operator='-'
+><leftOperand
+><float value='2.5'
+/></leftOperand
+><rightOperand
+><integer value='1'
+/></rightOperand
+></binaryOperation
+></arguments
+></invocation
+></program
+>

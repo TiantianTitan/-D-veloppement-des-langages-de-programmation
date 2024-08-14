@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id: u840-6.scm 620 2007-01-07 14:24:50Z queinnec $
+(comment "super() simple")
+(expected-result 840)
+
+(defclass Point Object
+  (x)
+  (define (m1)
+    (oget (self) "x")) )
+
+(defclass Point2D Point
+  (y)
+  (define (m1)
+    (* (oget (self) "y")
+       (super) ) ) )
+
+(let ((pc (new Point2D 10 84)))
+  (try-catch-finally
+   (send "m1" pc)
+   (lambda (e) #f)
+   #f ) )
+
+;;; end of u840-6.scm
+
+ -->
+<program
+><!-- test:name description='super() simple' 
+--><!-- test:result value='840' 
+--><classDefinition name='Point' parent='Object'
+><fields
+><field name='x'
+/></fields
+><methods
+><method name='m1'
+><variables
+></variables
+><body
+><fieldRead field='x'
+><target
+><self
+/></target
+></fieldRead
+></body
+></method
+></methods
+></classDefinition
+><classDefinition name='Point2D' parent='Point'
+><fields
+><field name='y'
+/></fields
+><methods
+><method name='m1'
+><variables
+></variables
+><body
+><binaryOperation operator='*'
+><leftOperand
+><fieldRead field='y'
+><target
+><self
+/></target
+></fieldRead
+></leftOperand
+><rightOperand
+><super
+/></rightOperand
+></binaryOperation
+></body
+></method
+></methods
+></classDefinition
+><block
+><bindings
+><binding
+><variable name='pc'
+/><initialisation
+><instantiation class='Point2D'
+><integer value='10'
+/><integer value='84'
+/></instantiation
+></initialisation
+></binding
+></bindings
+><body
+><try
+><body
+><send message='m1'
+><receiver
+><variable name='pc'
+/></receiver
+><arguments
+></arguments
+></send
+></body
+><catch exception='e'
+><boolean value='false'
+/></catch
+></try
+></body
+></block
+></program
+>

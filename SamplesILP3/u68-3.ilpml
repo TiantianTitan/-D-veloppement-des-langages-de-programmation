@@ -1,0 +1,15 @@
+let x = 1 in
+(
+  (
+    try 
+    (
+      try (throw(4); x = 44)
+      catch (exc) throw(2 * exc)
+      finally x = 3 * x
+    )
+    catch (exc) x = 5 * x * exc
+  );
+  print(x);
+  x == 120
+)
+

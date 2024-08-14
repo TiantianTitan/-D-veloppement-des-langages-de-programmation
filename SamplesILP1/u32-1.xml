@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id: u32-1.scm 405 2006-09-13 17:21:53Z queinnec $
+(comment "addition contagieuse" 8.5)
+(let ((f1 2.2))
+  (let ((f2 6.3))
+    (+ f1 f2) ) )
+
+;;; end of u32-1.scm
+
+ -->
+<program
+><!-- test:name description='addition contagieuse' 
+--><block
+><bindings
+><binding
+><variable name='f1'
+/><initialisation
+><float value='2.2'
+/></initialisation
+></binding
+></bindings
+><body
+><block
+><bindings
+><binding
+><variable name='f2'
+/><initialisation
+><float value='6.3'
+/></initialisation
+></binding
+></bindings
+><body
+><binaryOperation operator='+'
+><leftOperand
+><variable name='f1'
+/></leftOperand
+><rightOperand
+><variable name='f2'
+/></rightOperand
+></binaryOperation
+></body
+></block
+></body
+></block
+></program
+>

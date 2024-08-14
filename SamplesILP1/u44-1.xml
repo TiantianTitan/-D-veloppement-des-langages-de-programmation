@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id: u44-1.scm 405 2006-09-13 17:21:53Z queinnec $
+(comment "invocation primitive print (booleen)")
+(print (= 4 5))
+
+;;; end of u44-1.scm
+
+ -->
+<program
+><!-- test:name description='invocation primitive print (booleen)' 
+--><invocation
+><function
+><variable name='print'
+/></function
+><arguments
+><binaryOperation operator='=='
+><leftOperand
+><integer value='4'
+/></leftOperand
+><rightOperand
+><integer value='5'
+/></rightOperand
+></binaryOperation
+></arguments
+></invocation
+></program
+>

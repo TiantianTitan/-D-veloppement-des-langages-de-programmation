@@ -1,0 +1,31 @@
+class Point extends Object
+{
+    var x;
+    var y;
+
+    method x ()
+    self.x;
+}
+
+class PointColore extends Point
+{
+    var color;
+
+    method color1 ()
+    self.color;
+}
+
+class PointLarge extends Point
+{
+    var taille;
+
+    method color2 ()
+    self.taille;
+}
+
+let pc = new PointColore(11, 22, "red")
+and pl = new PointLarge(33, 44, 835) in
+(
+  (try pc.color2() catch (e) false);
+  836
+)

@@ -1,0 +1,8 @@
+class Point extends Object
+{
+    var x;
+    var y;
+}
+
+let point = new Point(11, 22) in
+(point.y = 811; point.y)

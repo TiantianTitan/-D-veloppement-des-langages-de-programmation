@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id: u62-3.scm 405 2006-09-13 17:21:53Z queinnec $
+(comment "le finally tourne meme s'il y a une exception depuis le corps")
+(let ((x 1))
+  (try-catch-finally
+    (throw 3)
+    #f
+    (set! x 4) )
+  (print x)
+  (= x 4) )
+
+;;; end of u62-3.scm
+
+ -->
+<program
+><!-- test:name description='le finally tourne meme s'il y a une exception depuis le corps' 
+--><block
+><bindings
+><binding
+><variable name='x'
+/><initialisation
+><integer value='1'
+/></initialisation
+></binding
+></bindings
+><body
+><try
+><body
+><invocation
+><function
+><variable name='throw'
+/></function
+><arguments
+><integer value='3'
+/></arguments
+></invocation
+></body
+><finally
+><assignment name='x'
+><value
+><integer value='4'
+/></value
+></assignment
+></finally
+></try
+><invocation
+><function
+><variable name='print'
+/></function
+><arguments
+><variable name='x'
+/></arguments
+></invocation
+><binaryOperation operator='=='
+><leftOperand
+><variable name='x'
+/></leftOperand
+><rightOperand
+><integer value='4'
+/></rightOperand
+></binaryOperation
+></body
+></block
+></program
+>

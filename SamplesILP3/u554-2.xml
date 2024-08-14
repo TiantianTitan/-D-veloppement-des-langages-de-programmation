@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id: u554-2.scm 405 2006-09-13 17:21:53Z queinnec $
+(comment "invocation en alternatives imbriquees")
+(define (foo x)
+  (* x 2) )
+(if (= 1 2)
+    554
+    (if (= 2 3)
+        -554
+        (foo 554) ) )
+
+;;; end of u554-2.scm
+
+ -->
+<program
+><!-- test:name description='invocation en alternatives imbriquees' 
+--><functionDefinition name='foo'
+><variables
+><variable name='x'
+/></variables
+><body
+><binaryOperation operator='*'
+><leftOperand
+><variable name='x'
+/></leftOperand
+><rightOperand
+><integer value='2'
+/></rightOperand
+></binaryOperation
+></body
+></functionDefinition
+><alternative
+><condition
+><binaryOperation operator='=='
+><leftOperand
+><integer value='1'
+/></leftOperand
+><rightOperand
+><integer value='2'
+/></rightOperand
+></binaryOperation
+></condition
+><consequence
+><integer value='554'
+/></consequence
+><alternant
+><alternative
+><condition
+><binaryOperation operator='=='
+><leftOperand
+><integer value='2'
+/></leftOperand
+><rightOperand
+><integer value='3'
+/></rightOperand
+></binaryOperation
+></condition
+><consequence
+><integer value='-554'
+/></consequence
+><alternant
+><invocation
+><function
+><variable name='foo'
+/></function
+><arguments
+><integer value='554'
+/></arguments
+></invocation
+></alternant
+></alternative
+></alternant
+></alternative
+></program
+>

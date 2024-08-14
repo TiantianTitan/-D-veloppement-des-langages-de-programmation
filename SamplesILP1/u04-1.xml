@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id: u04-1.scm 405 2006-09-13 17:21:53Z queinnec $
+(comment "constante booleenne fausse" #f)
+#f
+
+;;; end of u4-1.scm
+
+ -->
+<program
+><!-- test:name description='constante booleenne fausse' 
+--><boolean value='false'
+/></program
+>

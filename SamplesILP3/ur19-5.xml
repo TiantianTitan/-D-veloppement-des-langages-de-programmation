@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id$
+(comment "fermetures utilisees en dehors de sa portee native")
+(+ ((letrec ()
+      (define (quadruple n) (double (double n)))
+      (define (double x) (* 2 x))
+      quadruple )
+    4 )
+   3 )
+
+;;; end of ur19-5.scm
+
+ -->
+<program
+><!-- test:name description='fermetures utilisees en dehors de sa portee native' 
+--><binaryOperation operator='+'
+><leftOperand
+><invocation
+><function
+><codefinitions
+><functions
+><functionDefinition name='quadruple'
+><variables
+><variable name='n'
+/></variables
+><body
+><invocation
+><function
+><variable name='double'
+/></function
+><arguments
+><invocation
+><function
+><variable name='double'
+/></function
+><arguments
+><variable name='n'
+/></arguments
+></invocation
+></arguments
+></invocation
+></body
+></functionDefinition
+><functionDefinition name='double'
+><variables
+><variable name='x'
+/></variables
+><body
+><binaryOperation operator='*'
+><leftOperand
+><integer value='2'
+/></leftOperand
+><rightOperand
+><variable name='x'
+/></rightOperand
+></binaryOperation
+></body
+></functionDefinition
+></functions
+><body
+><variable name='quadruple'
+/></body
+></codefinitions
+></function
+><arguments
+><integer value='4'
+/></arguments
+></invocation
+></leftOperand
+><rightOperand
+><integer value='3'
+/></rightOperand
+></binaryOperation
+></program
+>

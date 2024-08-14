@@ -1,0 +1,17 @@
+class Point extends Object
+{
+    var x;
+}
+
+class Point2D extends Point
+{
+    var y;
+
+    method print ()
+    (print("print@Point2D"); super);
+
+}
+
+let pc = new Point2D(8492, 1) in
+try (pc.print(); 8492) catch (e) false
+

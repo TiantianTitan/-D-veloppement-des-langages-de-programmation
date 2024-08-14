@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id: u8490-6.scm 620 2007-01-07 14:24:50Z queinnec $
+(comment "super.print(arg1) simple")
+(expected-result 8490)
+(expected-printing "print@Point<Point:x=8490>")
+
+(defclass Point Object
+  (x)
+  (define (print)
+    (print "print@Point")
+    (super) ) )
+
+(let ((pc (new Point 8490)))
+  (try-catch-finally
+   (begin (send "print" pc)
+          8490 )
+   (lambda (e) #f)
+   #f ) )
+
+;;; end of u8490-6.scm
+
+ -->
+<program
+><!-- test:name description='super.print(arg1) simple' 
+--><!-- test:result value='8490' 
+--><!-- test:printing value='...a faire...' 
+--><classDefinition name='Point' parent='Object'
+><fields
+><field name='x'
+/></fields
+><methods
+><method name='print'
+><variables
+></variables
+><body
+><invocation
+><function
+><variable name='print'
+/></function
+><arguments
+><string
+>print@Point</string
+></arguments
+></invocation
+><super
+/></body
+></method
+></methods
+></classDefinition
+><block
+><bindings
+><binding
+><variable name='pc'
+/><initialisation
+><instantiation class='Point'
+><integer value='8490'
+/></instantiation
+></initialisation
+></binding
+></bindings
+><body
+><try
+><body
+><sequence
+><send message='print'
+><receiver
+><variable name='pc'
+/></receiver
+><arguments
+></arguments
+></send
+><integer value='8490'
+/></sequence
+></body
+><catch exception='e'
+><boolean value='false'
+/></catch
+></try
+></body
+></block
+></program
+>

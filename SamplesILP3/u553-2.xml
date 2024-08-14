@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id: u553-2.scm 405 2006-09-13 17:21:53Z queinnec $
+(comment "Invocation en alternant")
+(define (foo x)
+  (* 2 x) ) 
+(if #f 
+    553
+    (foo 553) )
+
+;;; end of u553-2.scm
+
+ -->
+<program
+><!-- test:name description='Invocation en alternant' 
+--><functionDefinition name='foo'
+><variables
+><variable name='x'
+/></variables
+><body
+><binaryOperation operator='*'
+><leftOperand
+><integer value='2'
+/></leftOperand
+><rightOperand
+><variable name='x'
+/></rightOperand
+></binaryOperation
+></body
+></functionDefinition
+><alternative
+><condition
+><boolean value='false'
+/></condition
+><consequence
+><integer value='553'
+/></consequence
+><alternant
+><invocation
+><function
+><variable name='foo'
+/></function
+><arguments
+><integer value='553'
+/></arguments
+></invocation
+></alternant
+></alternative
+></program
+>

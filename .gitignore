@@ -1,0 +1,15 @@
+.DS_store
+*.QNC
+*~
+*.o
+*.a
+Samples*/*.c
+C/gc-8.2.2
+*.class
+*BAK
+target
+Java/bin
+*.aux
+*.log
+*.pdf
+*.out

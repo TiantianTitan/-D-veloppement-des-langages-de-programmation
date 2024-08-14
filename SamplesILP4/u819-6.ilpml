@@ -1,0 +1,21 @@
+class Point extends Object
+{
+    var x;
+    var y;
+
+    method longueur ()
+    self.x + self.y;
+
+    method m1 (z,t)
+    (z * self.x) + (t * self.y);
+}
+
+class Truc extends Object
+{
+    method nexistePas (x)
+    x;
+}
+
+let point = new Point(2, 3) in
+(try point.nexistePas(23) catch (e) true);
+819

@@ -1,0 +1,6 @@
+function deuxfois(x)
+(2 * x);
+
+let f = deuxfois in
+f(3000) - 8
+

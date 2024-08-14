@@ -1,0 +1,2 @@
+let x = 2 in
+(lambda (y) x + y) (7500)

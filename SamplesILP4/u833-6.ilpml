@@ -1,0 +1,16 @@
+class Point extends Object
+{
+    var x;
+    var y;
+
+    method print () 832;
+}
+
+class PointColore extends Point
+{
+    var color;
+
+    method print () 833;
+}
+
+(new PointColore(11, 22, "red")).print()

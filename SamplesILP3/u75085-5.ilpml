@@ -1,0 +1,4 @@
+(
+  let n = 5 in
+  lambda () (n = n + 1; n)
+) ()

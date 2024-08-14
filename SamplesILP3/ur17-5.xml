@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id$
+(comment "deux definitions locales mutuellement recursives")
+(letrec ()
+  (define (odd n)
+    (if (= n 0) #f (even (- n 1))) )
+  (define (even n)
+    (if (<= n 0) #t (odd (- n 1))) )
+  (even 2) )
+
+;;; end of ur17-5.scm
+
+ -->
+<program
+><!-- test:name description='deux definitions locales mutuellement recursives' 
+--><codefinitions
+><functions
+><functionDefinition name='odd'
+><variables
+><variable name='n'
+/></variables
+><body
+><alternative
+><condition
+><binaryOperation operator='=='
+><leftOperand
+><variable name='n'
+/></leftOperand
+><rightOperand
+><integer value='0'
+/></rightOperand
+></binaryOperation
+></condition
+><consequence
+><boolean value='false'
+/></consequence
+><alternant
+><invocation
+><function
+><variable name='even'
+/></function
+><arguments
+><binaryOperation operator='-'
+><leftOperand
+><variable name='n'
+/></leftOperand
+><rightOperand
+><integer value='1'
+/></rightOperand
+></binaryOperation
+></arguments
+></invocation
+></alternant
+></alternative
+></body
+></functionDefinition
+><functionDefinition name='even'
+><variables
+><variable name='n'
+/></variables
+><body
+><alternative
+><condition
+><binaryOperation operator='&lt;='
+><leftOperand
+><variable name='n'
+/></leftOperand
+><rightOperand
+><integer value='0'
+/></rightOperand
+></binaryOperation
+></condition
+><consequence
+><boolean value='true'
+/></consequence
+><alternant
+><invocation
+><function
+><variable name='odd'
+/></function
+><arguments
+><binaryOperation operator='-'
+><leftOperand
+><variable name='n'
+/></leftOperand
+><rightOperand
+><integer value='1'
+/></rightOperand
+></binaryOperation
+></arguments
+></invocation
+></alternant
+></alternative
+></body
+></functionDefinition
+></functions
+><body
+><invocation
+><function
+><variable name='even'
+/></function
+><arguments
+><integer value='2'
+/></arguments
+></invocation
+></body
+></codefinitions
+></program
+>

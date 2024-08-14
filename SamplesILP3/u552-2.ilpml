@@ -1,0 +1,4 @@
+function foo(x)
+2 * x;
+
+if true then foo(3) else 552

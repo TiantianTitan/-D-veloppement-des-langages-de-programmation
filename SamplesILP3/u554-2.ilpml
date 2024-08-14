@@ -1,0 +1,11 @@
+function foo(x)
+(x * 2);
+
+if (1 == 2)
+    then 554
+    else 
+        (if (2 == 3)
+            then -554
+            else foo(554)
+        )
+)

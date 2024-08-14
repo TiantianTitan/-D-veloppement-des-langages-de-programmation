@@ -1,0 +1,13 @@
+class Point extends Object
+{
+}
+
+class SousPoint extends Point
+{
+    var sous;
+
+    method m1 ()
+    self.sous;
+}
+
+(new SousPoint(828)).m1()

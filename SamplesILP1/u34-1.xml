@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id: u34-1.scm 405 2006-09-13 17:21:53Z queinnec $
+(comment "Concatenation de chaine")
+(string-append "debut" "fin")
+
+;;; end of u34-1.scm
+
+ -->
+<program
+><!-- test:name description='Concatenation de chaine' 
+--><binaryOperation operator='+'
+><leftOperand
+><string
+>debut</string
+></leftOperand
+><rightOperand
+><string
+>fin</string
+></rightOperand
+></binaryOperation
+></program
+>

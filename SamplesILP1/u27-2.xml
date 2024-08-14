@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id: u27-2.scm 405 2006-09-13 17:21:53Z queinnec $
+(comment "bloc local avec 2 variables et masquage")
+(let ((x 1)
+      (y 2) )
+  (let ((y 3))
+    y ) )
+
+;;; end of u27-2.scm
+
+ -->
+<program
+><!-- test:name description='bloc local avec 2 variables et masquage' 
+--><block
+><bindings
+><binding
+><variable name='x'
+/><initialisation
+><integer value='1'
+/></initialisation
+></binding
+><binding
+><variable name='y'
+/><initialisation
+><integer value='2'
+/></initialisation
+></binding
+></bindings
+><body
+><block
+><bindings
+><binding
+><variable name='y'
+/><initialisation
+><integer value='3'
+/></initialisation
+></binding
+></bindings
+><body
+><variable name='y'
+/></body
+></block
+></body
+></block
+></program
+>

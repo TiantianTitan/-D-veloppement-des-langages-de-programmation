@@ -1,0 +1,14 @@
+let x = 1 in
+(
+  (try
+    (
+      x = x + 1;
+      (
+        try (x = x + 1; throw(x))
+        catch (exc) (print(x); print(exc); x = 2 * x * exc; throw(x))
+      )
+    )
+    catch (exc) (print(x); print(exc); x = 3 * x * exc)
+  );
+  x == 972
+)

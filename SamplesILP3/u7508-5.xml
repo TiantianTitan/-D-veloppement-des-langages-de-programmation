@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id$
+(comment "mutable closed variable")
+(let ((n 7507))
+  ((lambda () 
+     (set! n (+ n 1))
+     n ))
+)
+
+;;; end of u7508-5.scm
+
+ -->
+<program
+><!-- test:name description='mutable closed variable' 
+--><block
+><bindings
+><binding
+><variable name='n'
+/><initialisation
+><integer value='7507'
+/></initialisation
+></binding
+></bindings
+><body
+><invocation
+><function
+><lambda
+><variables
+></variables
+><body
+><assignment name='n'
+><value
+><binaryOperation operator='+'
+><leftOperand
+><variable name='n'
+/></leftOperand
+><rightOperand
+><integer value='1'
+/></rightOperand
+></binaryOperation
+></value
+></assignment
+><variable name='n'
+/></body
+></lambda
+></function
+><arguments
+></arguments
+></invocation
+></body
+></block
+></program
+>

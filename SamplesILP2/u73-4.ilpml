@@ -1,0 +1,19 @@
+function f1(x)
+(2 * x);
+
+function f2(x, y)
+f1(f1(x));
+
+function f3(x)
+f2(f1(x), f2(x, x));
+
+function fr1(x)
+fr2(x);
+
+function fr2(x)
+fr3(fr3(x));
+
+function fr3(x)
+f3(fr1(fr3(x)));
+
+f3(73)

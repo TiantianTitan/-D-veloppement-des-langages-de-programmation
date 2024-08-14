@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id: u27-1.scm 405 2006-09-13 17:21:53Z queinnec $
+(comment "bloc unaire masquage" 2)
+(let ((x 1))
+  (let ((x 2))
+    x ) )
+
+;;; end of u27-1.scm
+
+ -->
+<program
+><!-- test:name description='bloc unaire masquage' 
+--><block
+><bindings
+><binding
+><variable name='x'
+/><initialisation
+><integer value='1'
+/></initialisation
+></binding
+></bindings
+><body
+><block
+><bindings
+><binding
+><variable name='x'
+/><initialisation
+><integer value='2'
+/></initialisation
+></binding
+></bindings
+><body
+><variable name='x'
+/></body
+></block
+></body
+></block
+></program
+>

@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id: u47-1.scm 405 2006-09-13 17:21:53Z queinnec $
+(comment "alternative sans effet de bord")
+(begin 
+  (if #f (print "invisible"))
+  47 )
+
+;;; end of u47-1.scm
+
+ -->
+<program
+><!-- test:name description='alternative sans effet de bord' 
+--><sequence
+><alternative
+><condition
+><boolean value='false'
+/></condition
+><consequence
+><invocation
+><function
+><variable name='print'
+/></function
+><arguments
+><string
+>invisible</string
+></arguments
+></invocation
+></consequence
+></alternative
+><integer value='47'
+/></sequence
+></program
+>

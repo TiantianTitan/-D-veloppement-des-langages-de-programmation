@@ -1,0 +1,7 @@
+let x = 11
+and y = 22
+in
+let x = x + y
+and y = x * y
+in
+x * y

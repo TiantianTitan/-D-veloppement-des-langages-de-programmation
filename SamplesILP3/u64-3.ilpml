@@ -1,0 +1,9 @@
+let x = 1 in
+(
+  (
+    try (throw(6); x = 4)
+    catch (exc) x = exc
+  );
+  print(x);
+  x == 6
+)

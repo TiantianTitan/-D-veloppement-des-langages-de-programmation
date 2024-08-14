@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id$
+(comment "global variable name to be mangled")
+(define (f)
+  (set! mang:le 5492) )
+(f)
+mang:le
+;;; end of 5492-2.scm
+
+ -->
+<program
+><!-- test:name description='global variable name to be mangled' 
+--><functionDefinition name='f'
+><variables
+></variables
+><body
+><assignment name='mang:le'
+><value
+><integer value='5492'
+/></value
+></assignment
+></body
+></functionDefinition
+><invocation
+><function
+><variable name='f'
+/></function
+><arguments
+></arguments
+></invocation
+><variable name='mang:le'
+/></program
+>

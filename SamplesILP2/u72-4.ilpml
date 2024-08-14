@@ -1,0 +1,7 @@
+function foo(x, y)
+(x + y);
+
+foo(
+     (if true then 8 else 1),
+     (let x = 8 in x * x)
+   )

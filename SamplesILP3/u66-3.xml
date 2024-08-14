@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id: u66-3.scm 405 2006-09-13 17:21:53Z queinnec $
+(comment "tous les finally tournent")
+(let ((x 0))
+  (try-catch-finally
+    (begin 
+      (set! x (+ x 1))
+      (try-catch-finally
+        (begin 
+          (set! x (+ x 10))
+          (throw x) )
+        #f
+        (begin
+          (print x)
+          (set! x (* 2 x)) ) ) )
+    #f
+    (begin 
+      (print x)
+      (set! x (* 3 x)) ) )
+  (= x 66) )
+
+;;; end of u66-3.scm
+
+ -->
+<program
+><!-- test:name description='tous les finally tournent' 
+--><block
+><bindings
+><binding
+><variable name='x'
+/><initialisation
+><integer value='0'
+/></initialisation
+></binding
+></bindings
+><body
+><try
+><body
+><sequence
+><assignment name='x'
+><value
+><binaryOperation operator='+'
+><leftOperand
+><variable name='x'
+/></leftOperand
+><rightOperand
+><integer value='1'
+/></rightOperand
+></binaryOperation
+></value
+></assignment
+><try
+><body
+><sequence
+><assignment name='x'
+><value
+><binaryOperation operator='+'
+><leftOperand
+><variable name='x'
+/></leftOperand
+><rightOperand
+><integer value='10'
+/></rightOperand
+></binaryOperation
+></value
+></assignment
+><invocation
+><function
+><variable name='throw'
+/></function
+><arguments
+><variable name='x'
+/></arguments
+></invocation
+></sequence
+></body
+><finally
+><sequence
+><invocation
+><function
+><variable name='print'
+/></function
+><arguments
+><variable name='x'
+/></arguments
+></invocation
+><assignment name='x'
+><value
+><binaryOperation operator='*'
+><leftOperand
+><integer value='2'
+/></leftOperand
+><rightOperand
+><variable name='x'
+/></rightOperand
+></binaryOperation
+></value
+></assignment
+></sequence
+></finally
+></try
+></sequence
+></body
+><finally
+><sequence
+><invocation
+><function
+><variable name='print'
+/></function
+><arguments
+><variable name='x'
+/></arguments
+></invocation
+><assignment name='x'
+><value
+><binaryOperation operator='*'
+><leftOperand
+><integer value='3'
+/></leftOperand
+><rightOperand
+><variable name='x'
+/></rightOperand
+></binaryOperation
+></value
+></assignment
+></sequence
+></finally
+></try
+><binaryOperation operator='=='
+><leftOperand
+><variable name='x'
+/></leftOperand
+><rightOperand
+><integer value='66'
+/></rightOperand
+></binaryOperation
+></body
+></block
+></program
+>

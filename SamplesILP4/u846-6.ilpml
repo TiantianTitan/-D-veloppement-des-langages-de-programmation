@@ -1,0 +1,35 @@
+class Point extends Object
+{
+    var x;
+
+    method m1 (tt,uu)
+    tt * self.x;
+}
+
+class Point2D extends Point
+{
+    var y;
+
+    method m1 (ttt,uuu)
+    (uuu * self.y) + super;
+}
+
+class Point3D extends Point2D
+{
+    var z;
+
+    method m1 (t,u)
+    self.z;
+}
+
+class Point4D extends Point3D
+{
+    var t;
+
+    method m1 (tt,uu)
+    self.t + super;
+}
+
+let pc4 = new Point4D(-1, -2, 400, 16)
+and pc2 = new Point2D(20, 1) in
+try pc4.m1(-3, -4) + pc2.m1(20, 30) catch (e) false

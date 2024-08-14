@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id$
+(comment "fermeture recursive utilisee en dehors de sa portee native")
+(- ((letrec ()
+      (define (fact n) (if (<= n 1) 1 (* n (fact (- n 1)))))
+      fact )
+    4 )
+   4 )
+
+;;; end of ur20-5.scm
+
+ -->
+<program
+><!-- test:name description='fermeture recursive utilisee en dehors de sa portee native' 
+--><binaryOperation operator='-'
+><leftOperand
+><invocation
+><function
+><codefinitions
+><functions
+><functionDefinition name='fact'
+><variables
+><variable name='n'
+/></variables
+><body
+><alternative
+><condition
+><binaryOperation operator='&lt;='
+><leftOperand
+><variable name='n'
+/></leftOperand
+><rightOperand
+><integer value='1'
+/></rightOperand
+></binaryOperation
+></condition
+><consequence
+><integer value='1'
+/></consequence
+><alternant
+><binaryOperation operator='*'
+><leftOperand
+><variable name='n'
+/></leftOperand
+><rightOperand
+><invocation
+><function
+><variable name='fact'
+/></function
+><arguments
+><binaryOperation operator='-'
+><leftOperand
+><variable name='n'
+/></leftOperand
+><rightOperand
+><integer value='1'
+/></rightOperand
+></binaryOperation
+></arguments
+></invocation
+></rightOperand
+></binaryOperation
+></alternant
+></alternative
+></body
+></functionDefinition
+></functions
+><body
+><variable name='fact'
+/></body
+></codefinitions
+></function
+><arguments
+><integer value='4'
+/></arguments
+></invocation
+></leftOperand
+><rightOperand
+><integer value='4'
+/></rightOperand
+></binaryOperation
+></program
+>

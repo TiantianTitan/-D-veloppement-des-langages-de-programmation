@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- 
+
+;;; $Id: u844-6.scm 620 2007-01-07 14:24:50Z queinnec $
+(comment "super(arg1 arg2) double et renommage")
+(expected-result 844)
+
+(defclass Point Object
+  (x)
+  (define (m1 u t)
+    (* u (oget (self) "x"))) )
+
+(defclass Point2D Point
+  (y)
+  (define (m1 t u)
+    (+ (* u (oget (self) "y"))
+       (super) ) ) )
+
+(defclass Point3D Point2D
+  (z)
+  (define (m1 t u)
+    (+ (oget (self) "z")
+       (super) ) ) )
+
+(let ((pc (new Point3D 400 10 14)))
+  (try-catch-finally
+   (send "m1" pc 2 3) ; 14 + 3*10 + 2*400
+   (lambda (e) #f)
+   #f ) )
+
+;;; end of u844-6.scm
+
+ -->
+<program
+><!-- test:name description='super(arg1 arg2) double et renommage' 
+--><!-- test:result value='844' 
+--><classDefinition name='Point' parent='Object'
+><fields
+><field name='x'
+/></fields
+><methods
+><method name='m1'
+><variables
+><variable name='u'
+/><variable name='t'
+/></variables
+><body
+><binaryOperation operator='*'
+><leftOperand
+><variable name='u'
+/></leftOperand
+><rightOperand
+><fieldRead field='x'
+><target
+><self
+/></target
+></fieldRead
+></rightOperand
+></binaryOperation
+></body
+></method
+></methods
+></classDefinition
+><classDefinition name='Point2D' parent='Point'
+><fields
+><field name='y'
+/></fields
+><methods
+><method name='m1'
+><variables
+><variable name='t'
+/><variable name='u'
+/></variables
+><body
+><binaryOperation operator='+'
+><leftOperand
+><binaryOperation operator='*'
+><leftOperand
+><variable name='u'
+/></leftOperand
+><rightOperand
+><fieldRead field='y'
+><target
+><self
+/></target
+></fieldRead
+></rightOperand
+></binaryOperation
+></leftOperand
+><rightOperand
+><super
+/></rightOperand
+></binaryOperation
+></body
+></method
+></methods
+></classDefinition
+><classDefinition name='Point3D' parent='Point2D'
+><fields
+><field name='z'
+/></fields
+><methods
+><method name='m1'
+><variables
+><variable name='t'
+/><variable name='u'
+/></variables
+><body
+><binaryOperation operator='+'
+><leftOperand
+><fieldRead field='z'
+><target
+><self
+/></target
+></fieldRead
+></leftOperand
+><rightOperand
+><super
+/></rightOperand
+></binaryOperation
+></body
+></method
+></methods
+></classDefinition
+><block
+><bindings
+><binding
+><variable name='pc'
+/><initialisation
+><instantiation class='Point3D'
+><integer value='400'
+/><integer value='10'
+/><integer value='14'
+/></instantiation
+></initialisation
+></binding
+></bindings
+><body
+><try
+><body
+><send message='m1'
+><receiver
+><variable name='pc'
+/></receiver
+><arguments
+><integer value='2'
+/><integer value='3'
+/></arguments
+></send
+></body
+><catch exception='e'
+><boolean value='false'
+/></catch
+></try
+></body
+></block
+></program
+>
